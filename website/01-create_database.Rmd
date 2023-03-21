@@ -91,3 +91,18 @@ dbExecute(sighting_db, "CREATE TABLE sighting_reports (
           );")
 
 ```
+
+## Database Diagram
+
+Here is what our database looks like in diagram form.
+
+```{r diagram, eval = T, echo = F, message = F, out.width = '80%', fig.align = 'center', fig.cap = "Diagram of Tables in Sightings Database"}
+
+knitr::include_graphics("diagram.jpg")
+
+```
+
+
+
+
+

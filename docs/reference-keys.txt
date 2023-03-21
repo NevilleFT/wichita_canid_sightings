@@ -1,3 +1,4 @@
+fig:diagram
 about
 building-the-database
 loading-packages
@@ -7,3 +8,4 @@ species-table
 zip-code-table
 date-table
 sighting-table
+database-diagram

@@ -23,7 +23,7 @@
 <meta name="author" content="Neville Taraporevala" />
 
 
-<meta name="date" content="2023-03-17" />
+<meta name="date" content="2023-03-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -148,6 +148,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.3.3" data-path="building-the-database.html"><a href="building-the-database.html#date-table"><i class="fa fa-check"></i><b>2.3.3</b> Date table</a></li>
 <li class="chapter" data-level="2.3.4" data-path="building-the-database.html"><a href="building-the-database.html#sighting-table"><i class="fa fa-check"></i><b>2.3.4</b> Sighting table</a></li>
 </ul></li>
+<li class="chapter" data-level="2.4" data-path="building-the-database.html"><a href="building-the-database.html#database-diagram"><i class="fa fa-check"></i><b>2.4</b> Database Diagram</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -233,8 +234,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-15"><a href="building-the-database.html#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="st">          FOREIGN KEY (species) REFERENCES species(species)</span></span>
 <span id="cb6-16"><a href="building-the-database.html#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="st">          FOREIGN KEY (zip_code) REFERENCES zip_code(zip_code)</span></span>
 <span id="cb6-17"><a href="building-the-database.html#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="st">          );&quot;</span>)</span></code></pre></div>
-
 </div>
+</div>
+<div id="database-diagram" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Database Diagram<a href="building-the-database.html#database-diagram" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here is what our database looks like in diagram form.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:diagram"></span>
+<img src="diagram.jpg" alt="Diagram of Tables in Sightings Database" width="80%" />
+<p class="caption">
+Figure 2.1: Diagram of Tables in Sightings Database
+</p>
+</div>
+
 </div>
 </div>
             </section>
