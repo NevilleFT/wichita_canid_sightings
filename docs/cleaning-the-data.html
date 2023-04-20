@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Cleaning the data | Primary Visualizations</title>
+  <meta name="description" content="This is my final project for Reproducible Data Science 2023." />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Cleaning the data | Primary Visualizations" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is my final project for Reproducible Data Science 2023." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Cleaning the data | Primary Visualizations" />
+  
+  <meta name="twitter:description" content="This is my final project for Reproducible Data Science 2023." />
+  
+
+<meta name="author" content="Neville Taraporevala" />
+
+
+<meta name="date" content="2023-04-20" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="building-the-database.html"/>
+<link rel="next" href="preliminary-visualizations.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a></li>
+<li class="chapter" data-level="2" data-path="building-the-database.html"><a href="building-the-database.html"><i class="fa fa-check"></i><b>2</b> Building the database</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="building-the-database.html"><a href="building-the-database.html#loading-packages"><i class="fa fa-check"></i><b>2.1</b> Loading Packages</a></li>
+<li class="chapter" data-level="2.2" data-path="building-the-database.html"><a href="building-the-database.html#create-database"><i class="fa fa-check"></i><b>2.2</b> Create database</a></li>
+<li class="chapter" data-level="2.3" data-path="building-the-database.html"><a href="building-the-database.html#creating-tables"><i class="fa fa-check"></i><b>2.3</b> Creating tables</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="building-the-database.html"><a href="building-the-database.html#species-table"><i class="fa fa-check"></i><b>2.3.1</b> Species table</a></li>
+<li class="chapter" data-level="2.3.2" data-path="building-the-database.html"><a href="building-the-database.html#zip-code-table"><i class="fa fa-check"></i><b>2.3.2</b> Zip code table</a></li>
+<li class="chapter" data-level="2.3.3" data-path="building-the-database.html"><a href="building-the-database.html#date-table"><i class="fa fa-check"></i><b>2.3.3</b> Date table</a></li>
+<li class="chapter" data-level="2.3.4" data-path="building-the-database.html"><a href="building-the-database.html#sighting-table"><i class="fa fa-check"></i><b>2.3.4</b> Sighting table</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="building-the-database.html"><a href="building-the-database.html#database-diagram"><i class="fa fa-check"></i><b>2.4</b> Database Diagram</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cleaning-the-data.html"><a href="cleaning-the-data.html"><i class="fa fa-check"></i><b>3</b> Cleaning the data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cleaning-the-data.html"><a href="cleaning-the-data.html#loading-packages-1"><i class="fa fa-check"></i><b>3.1</b> Loading Packages</a></li>
+<li class="chapter" data-level="3.2" data-path="cleaning-the-data.html"><a href="cleaning-the-data.html#import-sightings-csv-from-survey123-currently-in-data-folder"><i class="fa fa-check"></i><b>3.2</b> Import sightings CSV from Survey123 currently in data folder</a></li>
+<li class="chapter" data-level="3.3" data-path="cleaning-the-data.html"><a href="cleaning-the-data.html#change-the-column-names-from-the-long-names-to-shorter-ones."><i class="fa fa-check"></i><b>3.3</b> Change the column names from the long names to shorter ones.</a></li>
+<li class="chapter" data-level="3.4" data-path="cleaning-the-data.html"><a href="cleaning-the-data.html#coding-behavior"><i class="fa fa-check"></i><b>3.4</b> Coding Behavior</a></li>
+<li class="chapter" data-level="3.5" data-path="cleaning-the-data.html"><a href="cleaning-the-data.html#coding-habitat-and-peoples-feelings"><i class="fa fa-check"></i><b>3.5</b> Coding Habitat and People’s Feelings</a></li>
+<li class="chapter" data-level="3.6" data-path="cleaning-the-data.html"><a href="cleaning-the-data.html#removing-false-locations"><i class="fa fa-check"></i><b>3.6</b> Removing false locations</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="preliminary-visualizations.html"><a href="preliminary-visualizations.html"><i class="fa fa-check"></i><b>4</b> Preliminary Visualizations</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="preliminary-visualizations.html"><a href="preliminary-visualizations.html#maps"><i class="fa fa-check"></i><b>4.1</b> Maps</a></li>
+<li class="chapter" data-level="4.2" data-path="preliminary-visualizations.html"><a href="preliminary-visualizations.html#how-people-feel-seeing-canids"><i class="fa fa-check"></i><b>4.2</b> How people feel seeing canids</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Primary Visualizations</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="cleaning-the-data" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Cleaning the data<a href="cleaning-the-data.html#cleaning-the-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Before we can look at the data, we must first clean it so it is in a usable form.</p>
+<div id="loading-packages-1" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Loading Packages<a href="cleaning-the-data.html#loading-packages-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First, we call the package <code>tidyverse</code>. This package has many helpful functions that we will use.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="cleaning-the-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
+</div>
+<div id="import-sightings-csv-from-survey123-currently-in-data-folder" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Import sightings CSV from Survey123 currently in data folder<a href="cleaning-the-data.html#import-sightings-csv-from-survey123-currently-in-data-folder" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>I have changed the x and y values so I can make this “data” public. I am not able to share the actual data.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="cleaning-the-data.html#cb8-1" aria-hidden="true" tabindex="-1"></a>sightings <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../data/23-04-15_Sightings.csv&quot;</span>)</span></code></pre></div>
+<p>Check that went well, look at the first few rows and the names of the columns —-</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="cleaning-the-data.html#cb9-1" aria-hidden="true" tabindex="-1"></a>sightings <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 594 × 9
+##        X ObjectID What.species.of.…¹ What.…² Pleas…³ How.m…⁴ Compl…⁵     x     y
+##    &lt;int&gt;    &lt;int&gt; &lt;chr&gt;              &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+##  1     1        5 Coyote             Moving… Reside… 1       Other   -97.5  37.7
+##  2     2        6 Red Fox            Moving… Reside… 1       Happy   -97.5  37.7
+##  3     3       10 Other              Other   Other   1       Indeff… -97.2  37.9
+##  4     4       15 Red Fox            Moving… Reside… 1       Happy   -97.5  37.6
+##  5     5       17 Coyote             Moving… Reside… 1       Worried -97.1  37.7
+##  6     6       18 Coyote             Moving… Street… 3+      Scared… -97.3  37.6
+##  7     7       20 Other              Huntin… Reside… 1       Lucky,… -97.3  37.7
+##  8     8       21 Red Fox            Moving… Reside… 1       Indeff… -97.3  37.7
+##  9     9       22 Red Fox            Mostly… Reside… 3+      Happy   -97.4  37.7
+## 10    10       23 Red Fox            Huntin… Reside… 1       Indeff… -97.4  37.7
+## # … with 584 more rows, and abbreviated variable names
+## #   ¹​What.species.of.animal.did.you.see., ²​What.was.the.animal.doing.,
+## #   ³​Please.describe.the.habitat.the.animal.was.observed.in,
+## #   ⁴​How.many.animals.of.this.species.did.you.see.in.total.,
+## #   ⁵​Complete.this.sentence..Seeing.this.animal.made.me.feel.</code></pre>
+</div>
+<div id="change-the-column-names-from-the-long-names-to-shorter-ones." class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Change the column names from the long names to shorter ones.<a href="cleaning-the-data.html#change-the-column-names-from-the-long-names-to-shorter-ones." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="cleaning-the-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(sightings) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;SurveyNum&quot;</span>,</span>
+<span id="cb11-2"><a href="cleaning-the-data.html#cb11-2" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;SurveyID&quot;</span>, </span>
+<span id="cb11-3"><a href="cleaning-the-data.html#cb11-3" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;Species&quot;</span>,</span>
+<span id="cb11-4"><a href="cleaning-the-data.html#cb11-4" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;Behavior&quot;</span>,</span>
+<span id="cb11-5"><a href="cleaning-the-data.html#cb11-5" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;Habitat&quot;</span>,</span>
+<span id="cb11-6"><a href="cleaning-the-data.html#cb11-6" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;Count&quot;</span>,</span>
+<span id="cb11-7"><a href="cleaning-the-data.html#cb11-7" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;Feelings&quot;</span>,</span>
+<span id="cb11-8"><a href="cleaning-the-data.html#cb11-8" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;x_long&quot;</span>,</span>
+<span id="cb11-9"><a href="cleaning-the-data.html#cb11-9" aria-hidden="true" tabindex="-1"></a>                         <span class="st">&quot;y_lat&quot;</span></span>
+<span id="cb11-10"><a href="cleaning-the-data.html#cb11-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<p>Check that went ok</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="cleaning-the-data.html#cb12-1" aria-hidden="true" tabindex="-1"></a>sightings <span class="sc">%&gt;%</span> <span class="fu">as_tibble</span>()</span></code></pre></div>
+<pre><code>## # A tibble: 594 × 9
+##    SurveyNum SurveyID Species Behavior        Habitat Count Feeli…¹ x_long y_lat
+##        &lt;int&gt;    &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
+##  1         1        5 Coyote  Moving_Fast     Reside… 1     Other    -97.5  37.7
+##  2         2        6 Red Fox Moving_Slow     Reside… 1     Happy    -97.5  37.7
+##  3         3       10 Other   Other           Other   1     Indeff…  -97.2  37.9
+##  4         4       15 Red Fox Moving_Slow     Reside… 1     Happy    -97.5  37.6
+##  5         5       17 Coyote  Moving_Slow,Mo… Reside… 1     Worried  -97.1  37.7
+##  6         6       18 Coyote  Moving_Fast,Vo… Street… 3+    Scared…  -97.3  37.6
+##  7         7       20 Other   Hunting_Eating  Reside… 1     Lucky,…  -97.3  37.7
+##  8         8       21 Red Fox Moving_Fast     Reside… 1     Indeff…  -97.3  37.7
+##  9         9       22 Red Fox Mostly_Station… Reside… 3+    Happy    -97.4  37.7
+## 10        10       23 Red Fox Hunting_Eating  Reside… 1     Indeff…  -97.4  37.7
+## # … with 584 more rows, and abbreviated variable name ¹​Feelings</code></pre>
+</div>
+<div id="coding-behavior" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Coding Behavior<a href="cleaning-the-data.html#coding-behavior" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The behaviors are currently coded in 1 cell each as a list of characters separated by commas.
+Instead, we can make these easier to run analyses on if we make these separate columns and code each behavior as a 1 or 0.</p>
+<p>These are all the combinations of behaviors people have put in. Not super important but interesting.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="cleaning-the-data.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(<span class="fu">pull</span>(sightings, Behavior))</span></code></pre></div>
+<pre><code>##  [1] &quot;Moving_Fast&quot;                                                                                                 
+##  [2] &quot;Moving_Slow&quot;                                                                                                 
+##  [3] &quot;Other&quot;                                                                                                       
+##  [4] &quot;Moving_Slow,Mostly_Stationary_Resting&quot;                                                                       
+##  [5] &quot;Moving_Fast,Vocalizing,Hunting_Eating,Interacting_with_human_pet&quot;                                            
+##  [6] &quot;Hunting_Eating&quot;                                                                                              
+##  [7] &quot;Mostly_Stationary_Resting,Vocalizing&quot;                                                                        
+##  [8] &quot;Moving_Slow,Hunting_Eating&quot;                                                                                  
+##  [9] &quot;Moving_Fast,Hunting_Eating&quot;                                                                                  
+## [10] &quot;Mostly_Stationary_Resting,Other&quot;                                                                             
+## [11] &quot;Moving_Fast,Vocalizing,Hunting_Eating&quot;                                                                       
+## [12] &quot;Roadkill&quot;                                                                                                    
+## [13] &quot;Mostly_Stationary_Resting&quot;                                                                                   
+## [14] &quot;Moving_Slow,Mostly_Stationary_Resting,Interacting_with_human_pet&quot;                                            
+## [15] &quot;Moving_Slow,Mostly_Stationary_Resting,Other&quot;                                                                 
+## [16] &quot;Moving_Fast,Other&quot;                                                                                           
+## [17] &quot;Hunting_Eating,Other&quot;                                                                                        
+## [18] &quot;Interacting_with_human_pet&quot;                                                                                  
+## [19] &quot;Moving_Slow,Moving_Fast,Mostly_Stationary_Resting&quot;                                                           
+## [20] &quot;Moving_Fast,Vocalizing&quot;                                                                                      
+## [21] &quot;Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Hunting_Eating&quot;                                            
+## [22] &quot;Vocalizing&quot;                                                                                                  
+## [23] &quot;Moving_Fast,Mostly_Stationary_Resting&quot;                                                                       
+## [24] &quot;Vocalizing,Interacting_with_human_pet&quot;                                                                       
+## [25] &quot;Mostly_Stationary_Resting,Interacting_with_human_pet&quot;                                                        
+## [26] &quot;Moving_Slow,Moving_Fast&quot;                                                                                     
+## [27] &quot;Moving_Fast,Interacting_with_human_pet&quot;                                                                      
+## [28] &quot;Mostly_Stationary_Resting,Hunting_Eating&quot;                                                                    
+## [29] &quot;Moving_Fast,Mostly_Stationary_Resting,Hunting_Eating&quot;                                                        
+## [30] &quot;Moving_Slow,Other&quot;                                                                                           
+## [31] &quot;Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Interacting_with_human_pet&quot;                                
+## [32] &quot;Moving_Slow,Moving_Fast,Vocalizing,Interacting_with_human_pet,Other&quot;                                         
+## [33] &quot;Moving_Slow,Moving_Fast,Hunting_Eating&quot;                                                                      
+## [34] &quot;Moving_Slow,Vocalizing,Hunting_Eating&quot;                                                                       
+## [35] &quot;Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Vocalizing,Hunting_Eating,Interacting_with_human_pet,Other&quot;
+## [36] &quot;Vocalizing,Other&quot;                                                                                            
+## [37] &quot;Moving_Slow,Mostly_Stationary_Resting,Vocalizing&quot;                                                            
+## [38] &quot;Moving_Fast,Vocalizing,Other&quot;                                                                                
+## [39] &quot;Moving_Fast,Hunting_Eating,Roadkill&quot;                                                                         
+## [40] &quot;Moving_Slow,Interacting_with_human_pet&quot;                                                                      
+## [41] &quot;Moving_Slow,Vocalizing&quot;                                                                                      
+## [42] &quot;Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Vocalizing,Hunting_Eating&quot;                                 
+## [43] &quot;Mostly_Stationary_Resting,Hunting_Eating,Interacting_with_human_pet&quot;                                         
+## [44] &quot;Moving_Slow,Moving_Fast,Vocalizing&quot;                                                                          
+## [45] &quot;Moving_Slow,Vocalizing,Hunting_Eating,Interacting_with_human_pet&quot;                                            
+## [46] &quot;Moving_Slow,Mostly_Stationary_Resting,Vocalizing,Other&quot;                                                      
+## [47] &quot;Interacting_with_human_pet,Other&quot;</code></pre>
+<p>First, we will set up vectors of length (# of rows) with NA’s.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="cleaning-the-data.html#cb16-1" aria-hidden="true" tabindex="-1"></a>sightings_length <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">pull</span>(sightings, SurveyNum))</span>
+<span id="cb16-2"><a href="cleaning-the-data.html#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="cleaning-the-data.html#cb16-3" aria-hidden="true" tabindex="-1"></a>moving_fast                  <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb16-4"><a href="cleaning-the-data.html#cb16-4" aria-hidden="true" tabindex="-1"></a>moving_slow                  <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb16-5"><a href="cleaning-the-data.html#cb16-5" aria-hidden="true" tabindex="-1"></a>mostly_stationary_resting    <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb16-6"><a href="cleaning-the-data.html#cb16-6" aria-hidden="true" tabindex="-1"></a>hunting_eating               <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb16-7"><a href="cleaning-the-data.html#cb16-7" aria-hidden="true" tabindex="-1"></a>interacting_with_human_pet   <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb16-8"><a href="cleaning-the-data.html#cb16-8" aria-hidden="true" tabindex="-1"></a>vocalizing                   <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb16-9"><a href="cleaning-the-data.html#cb16-9" aria-hidden="true" tabindex="-1"></a>roadkill                     <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb16-10"><a href="cleaning-the-data.html#cb16-10" aria-hidden="true" tabindex="-1"></a>other_behavior               <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span></code></pre></div>
+<p>Now, for each vector, if that behavior is listed, put a 1 in its vector, else put a 0.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="cleaning-the-data.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>sightings_length){</span>
+<span id="cb17-2"><a href="cleaning-the-data.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-3"><a href="cleaning-the-data.html#cb17-3" aria-hidden="true" tabindex="-1"></a>  behavior <span class="ot">&lt;-</span> <span class="fu">pull</span>(sightings, Behavior)[i]</span>
+<span id="cb17-4"><a href="cleaning-the-data.html#cb17-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-5"><a href="cleaning-the-data.html#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Moving_Fast&quot;</span>, behavior)){</span>
+<span id="cb17-6"><a href="cleaning-the-data.html#cb17-6" aria-hidden="true" tabindex="-1"></a>    moving_fast [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-7"><a href="cleaning-the-data.html#cb17-7" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-8"><a href="cleaning-the-data.html#cb17-8" aria-hidden="true" tabindex="-1"></a>    moving_fast [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb17-9"><a href="cleaning-the-data.html#cb17-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-10"><a href="cleaning-the-data.html#cb17-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-11"><a href="cleaning-the-data.html#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Moving_Slow&quot;</span>, behavior)){</span>
+<span id="cb17-12"><a href="cleaning-the-data.html#cb17-12" aria-hidden="true" tabindex="-1"></a>    moving_slow [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-13"><a href="cleaning-the-data.html#cb17-13" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-14"><a href="cleaning-the-data.html#cb17-14" aria-hidden="true" tabindex="-1"></a>    moving_slow [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb17-15"><a href="cleaning-the-data.html#cb17-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-16"><a href="cleaning-the-data.html#cb17-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-17"><a href="cleaning-the-data.html#cb17-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Mostly_Stationary_Resting&quot;</span>, behavior)){</span>
+<span id="cb17-18"><a href="cleaning-the-data.html#cb17-18" aria-hidden="true" tabindex="-1"></a>    mostly_stationary_resting [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-19"><a href="cleaning-the-data.html#cb17-19" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-20"><a href="cleaning-the-data.html#cb17-20" aria-hidden="true" tabindex="-1"></a>    mostly_stationary_resting [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb17-21"><a href="cleaning-the-data.html#cb17-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-22"><a href="cleaning-the-data.html#cb17-22" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-23"><a href="cleaning-the-data.html#cb17-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Hunting_Eating&quot;</span>, behavior)){</span>
+<span id="cb17-24"><a href="cleaning-the-data.html#cb17-24" aria-hidden="true" tabindex="-1"></a>    hunting_eating [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-25"><a href="cleaning-the-data.html#cb17-25" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-26"><a href="cleaning-the-data.html#cb17-26" aria-hidden="true" tabindex="-1"></a>    hunting_eating [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb17-27"><a href="cleaning-the-data.html#cb17-27" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-28"><a href="cleaning-the-data.html#cb17-28" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-29"><a href="cleaning-the-data.html#cb17-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Interacting_with_human_pet&quot;</span>, behavior)){</span>
+<span id="cb17-30"><a href="cleaning-the-data.html#cb17-30" aria-hidden="true" tabindex="-1"></a>    interacting_with_human_pet [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-31"><a href="cleaning-the-data.html#cb17-31" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-32"><a href="cleaning-the-data.html#cb17-32" aria-hidden="true" tabindex="-1"></a>    interacting_with_human_pet [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb17-33"><a href="cleaning-the-data.html#cb17-33" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-34"><a href="cleaning-the-data.html#cb17-34" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-35"><a href="cleaning-the-data.html#cb17-35" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Vocalizing&quot;</span>, behavior)){</span>
+<span id="cb17-36"><a href="cleaning-the-data.html#cb17-36" aria-hidden="true" tabindex="-1"></a>    vocalizing [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-37"><a href="cleaning-the-data.html#cb17-37" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-38"><a href="cleaning-the-data.html#cb17-38" aria-hidden="true" tabindex="-1"></a>    vocalizing [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb17-39"><a href="cleaning-the-data.html#cb17-39" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-40"><a href="cleaning-the-data.html#cb17-40" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-41"><a href="cleaning-the-data.html#cb17-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Roadkill&quot;</span>, behavior)){</span>
+<span id="cb17-42"><a href="cleaning-the-data.html#cb17-42" aria-hidden="true" tabindex="-1"></a>    roadkill [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-43"><a href="cleaning-the-data.html#cb17-43" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-44"><a href="cleaning-the-data.html#cb17-44" aria-hidden="true" tabindex="-1"></a>    roadkill[i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb17-45"><a href="cleaning-the-data.html#cb17-45" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-46"><a href="cleaning-the-data.html#cb17-46" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-47"><a href="cleaning-the-data.html#cb17-47" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Other&quot;</span>, behavior)){</span>
+<span id="cb17-48"><a href="cleaning-the-data.html#cb17-48" aria-hidden="true" tabindex="-1"></a>    other_behavior [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-49"><a href="cleaning-the-data.html#cb17-49" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb17-50"><a href="cleaning-the-data.html#cb17-50" aria-hidden="true" tabindex="-1"></a>    other_behavior [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb17-51"><a href="cleaning-the-data.html#cb17-51" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-52"><a href="cleaning-the-data.html#cb17-52" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb17-53"><a href="cleaning-the-data.html#cb17-53" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Now add these behavior vectors as columns on the database.
+And, remove the original behavior column, since it is now redundant.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="cleaning-the-data.html#cb18-1" aria-hidden="true" tabindex="-1"></a>sightings_b <span class="ot">&lt;-</span> sightings <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="cleaning-the-data.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Moving_fast                  =</span> moving_fast,</span>
+<span id="cb18-3"><a href="cleaning-the-data.html#cb18-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">Moving_slow                  =</span> moving_slow,</span>
+<span id="cb18-4"><a href="cleaning-the-data.html#cb18-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">Mostly_stationary_resting    =</span> mostly_stationary_resting,</span>
+<span id="cb18-5"><a href="cleaning-the-data.html#cb18-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">Hunting_eating               =</span> hunting_eating,</span>
+<span id="cb18-6"><a href="cleaning-the-data.html#cb18-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">Interacting_with_human_pet   =</span> interacting_with_human_pet,</span>
+<span id="cb18-7"><a href="cleaning-the-data.html#cb18-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">Vocalizing                   =</span> vocalizing,</span>
+<span id="cb18-8"><a href="cleaning-the-data.html#cb18-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">Roadkill                     =</span> roadkill,</span>
+<span id="cb18-9"><a href="cleaning-the-data.html#cb18-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">Other_behavior               =</span> other_behavior) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-10"><a href="cleaning-the-data.html#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Behavior)</span></code></pre></div>
+<p>Check that it is gone.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="cleaning-the-data.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(sightings_b)</span></code></pre></div>
+<pre><code>##  [1] &quot;SurveyNum&quot;                  &quot;SurveyID&quot;                  
+##  [3] &quot;Species&quot;                    &quot;Habitat&quot;                   
+##  [5] &quot;Count&quot;                      &quot;Feelings&quot;                  
+##  [7] &quot;x_long&quot;                     &quot;y_lat&quot;                     
+##  [9] &quot;Moving_fast&quot;                &quot;Moving_slow&quot;               
+## [11] &quot;Mostly_stationary_resting&quot;  &quot;Hunting_eating&quot;            
+## [13] &quot;Interacting_with_human_pet&quot; &quot;Vocalizing&quot;                
+## [15] &quot;Roadkill&quot;                   &quot;Other_behavior&quot;</code></pre>
+<p>Now delete all those intermediate behavior vectors.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="cleaning-the-data.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(behavior)</span>
+<span id="cb21-2"><a href="cleaning-the-data.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(moving_fast)</span>
+<span id="cb21-3"><a href="cleaning-the-data.html#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(moving_slow)</span>
+<span id="cb21-4"><a href="cleaning-the-data.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(mostly_stationary_resting)</span>
+<span id="cb21-5"><a href="cleaning-the-data.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(hunting_eating)</span>
+<span id="cb21-6"><a href="cleaning-the-data.html#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(interacting_with_human_pet)</span>
+<span id="cb21-7"><a href="cleaning-the-data.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(vocalizing)</span>
+<span id="cb21-8"><a href="cleaning-the-data.html#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(roadkill)</span>
+<span id="cb21-9"><a href="cleaning-the-data.html#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(other_behavior)</span></code></pre></div>
+<p>And the old sightings data frame.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="cleaning-the-data.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(sightings)</span></code></pre></div>
+</div>
+<div id="coding-habitat-and-peoples-feelings" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Coding Habitat and People’s Feelings<a href="cleaning-the-data.html#coding-habitat-and-peoples-feelings" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will do the same thing to habitat and feelings that we did to behavior.</p>
+<p>These are all the combinations of habitats people have put in.
+Not super important but interesting.</p>
+<p>Here are all the combinations of habitat and feelings.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="cleaning-the-data.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(<span class="fu">pull</span>(sightings_b, Habitat))</span></code></pre></div>
+<pre><code>##  [1] &quot;Residential_Area&quot;                                             
+##  [2] &quot;Other&quot;                                                        
+##  [3] &quot;Residential_Area,Other&quot;                                       
+##  [4] &quot;Street,Residential_Area,Wetland&quot;                              
+##  [5] &quot;Residential_Area,Wetland&quot;                                     
+##  [6] &quot;Street&quot;                                                       
+##  [7] &quot;Street,Residential_Area&quot;                                      
+##  [8] &quot;Neighborhood_Park&quot;                                            
+##  [9] &quot;Residential_Area,Forested_Area,Neighborhood_Park&quot;             
+## [10] &quot;Wetland&quot;                                                      
+## [11] &quot;Forested_Area&quot;                                                
+## [12] &quot;Street,Neighborhood_Park&quot;                                     
+## [13] &quot;Wetland,Other&quot;                                                
+## [14] &quot;Residential_Area,Neighborhood_Park&quot;                           
+## [15] &quot;Wetland,Neighborhood_Park&quot;                                    
+## [16] &quot;Wetland,Forested_Area,Neighborhood_Park&quot;                      
+## [17] &quot;Wetland,Forested_Area&quot;                                        
+## [18] &quot;Street,Wetland,Neighborhood_Park&quot;                             
+## [19] &quot;Street,Parking_lot,Other&quot;                                     
+## [20] &quot;Street,Residential_Area,Other&quot;                                
+## [21] &quot;Street,Residential_Area,Forested_Area&quot;                        
+## [22] &quot;Street,Residential_Area,Wetland,Other&quot;                        
+## [23] &quot;Street,Residential_Area,Forested_Area,Neighborhood_Park,Other&quot;
+## [24] &quot;Parking_lot,Forested_Area&quot;                                    
+## [25] &quot;Street,Residential_Area,Neighborhood_Park&quot;                    
+## [26] &quot;Street,Residential_Area,Parking_lot,Neighborhood_Park&quot;        
+## [27] &quot;Street,Residential_Area,Parking_lot,Forested_Area&quot;            
+## [28] &quot;Neighborhood_Park,Other&quot;                                      
+## [29] &quot;Forested_Area,Neighborhood_Park,Other&quot;                        
+## [30] &quot;Parking_lot&quot;                                                  
+## [31] &quot;Street,Other&quot;                                                 
+## [32] &quot;Residential_Area,Parking_lot,Neighborhood_Park&quot;               
+## [33] &quot;Residential_Area,Forested_Area&quot;                               
+## [34] &quot;Street,Wetland,Forested_Area,Other&quot;                           
+## [35] &quot;Residential_Area,Wetland,Forested_Area&quot;                       
+## [36] &quot;Forested_Area,Other&quot;                                          
+## [37] &quot;Street,Residential_Area,Parking_lot&quot;                          
+## [38] &quot;Residential_Area,Forested_Area,Other&quot;                         
+## [39] &quot;Street,Parking_lot,Forested_Area&quot;                             
+## [40] &quot;Street,Residential_Area,Wetland,Forested_Area&quot;                
+## [41] &quot;Street,Residential_Area,Wetland,Neighborhood_Park&quot;</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="cleaning-the-data.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(<span class="fu">pull</span>(sightings_b, Feelings))</span></code></pre></div>
+<pre><code>##  [1] &quot;Other&quot;                      &quot;Happy&quot;                     
+##  [3] &quot;Indefferent&quot;                &quot;Worried&quot;                   
+##  [5] &quot;Scared,Worried&quot;             &quot;Lucky,Indefferent&quot;         
+##  [7] &quot;Worried,Indefferent,Other&quot;  &quot;Happy,Lucky&quot;               
+##  [9] &quot;Lucky,Worried&quot;              &quot;Happy,Lucky,Other&quot;         
+## [11] &quot;Scared,Other&quot;               &quot;Lucky&quot;                     
+## [13] &quot;Worried,Other&quot;              &quot;Lucky,Worried,Indefferent&quot; 
+## [15] &quot;Happy,Worried&quot;              &quot;Angry&quot;                     
+## [17] &quot;Lucky,Scared,Worried&quot;       &quot;Worried,Indefferent&quot;       
+## [19] &quot;Angry,Other&quot;                &quot;Happy,Worried,Indefferent&quot; 
+## [21] &quot;Scared&quot;                     &quot;Happy,Lucky,Worried&quot;       
+## [23] &quot;Happy,Lucky,Scared&quot;         &quot;Happy,Other&quot;               
+## [25] &quot;Happy,Indefferent&quot;          &quot;Lucky,Indefferent,Other&quot;   
+## [27] &quot;Scared,Worried,Angry&quot;       &quot;Happy,Lucky,Worried,Other&quot; 
+## [29] &quot;Happy,Lucky,Scared,Worried&quot; &quot;Scared,Worried,Indefferent&quot;
+## [31] &quot;Worried,Angry&quot;</code></pre>
+<p>First, we will set up vectors of length (# of rows) with NA’s.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="cleaning-the-data.html#cb27-1" aria-hidden="true" tabindex="-1"></a>street               <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-2"><a href="cleaning-the-data.html#cb27-2" aria-hidden="true" tabindex="-1"></a>residential_area     <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-3"><a href="cleaning-the-data.html#cb27-3" aria-hidden="true" tabindex="-1"></a>parking_lot          <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-4"><a href="cleaning-the-data.html#cb27-4" aria-hidden="true" tabindex="-1"></a>wetland              <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-5"><a href="cleaning-the-data.html#cb27-5" aria-hidden="true" tabindex="-1"></a>forested_area        <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-6"><a href="cleaning-the-data.html#cb27-6" aria-hidden="true" tabindex="-1"></a>neighborhood_park    <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-7"><a href="cleaning-the-data.html#cb27-7" aria-hidden="true" tabindex="-1"></a>other_habitat        <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-8"><a href="cleaning-the-data.html#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="cleaning-the-data.html#cb27-9" aria-hidden="true" tabindex="-1"></a>happy                 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-10"><a href="cleaning-the-data.html#cb27-10" aria-hidden="true" tabindex="-1"></a>lucky                 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-11"><a href="cleaning-the-data.html#cb27-11" aria-hidden="true" tabindex="-1"></a>scared                <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-12"><a href="cleaning-the-data.html#cb27-12" aria-hidden="true" tabindex="-1"></a>worried               <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-13"><a href="cleaning-the-data.html#cb27-13" aria-hidden="true" tabindex="-1"></a>indifferent           <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-14"><a href="cleaning-the-data.html#cb27-14" aria-hidden="true" tabindex="-1"></a>angry                 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span>
+<span id="cb27-15"><a href="cleaning-the-data.html#cb27-15" aria-hidden="true" tabindex="-1"></a>other_feelings        <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">NA</span>, sightings_length)</span></code></pre></div>
+<p>Then we will fill the vectors with 1’s and 0’s.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="cleaning-the-data.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>sightings_length){</span>
+<span id="cb28-2"><a href="cleaning-the-data.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-3"><a href="cleaning-the-data.html#cb28-3" aria-hidden="true" tabindex="-1"></a>  habitat <span class="ot">&lt;-</span> <span class="fu">pull</span>(sightings_b, Habitat)[i]</span>
+<span id="cb28-4"><a href="cleaning-the-data.html#cb28-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-5"><a href="cleaning-the-data.html#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Street&quot;</span>, habitat)){</span>
+<span id="cb28-6"><a href="cleaning-the-data.html#cb28-6" aria-hidden="true" tabindex="-1"></a>    street [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-7"><a href="cleaning-the-data.html#cb28-7" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-8"><a href="cleaning-the-data.html#cb28-8" aria-hidden="true" tabindex="-1"></a>    street [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-9"><a href="cleaning-the-data.html#cb28-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-10"><a href="cleaning-the-data.html#cb28-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-11"><a href="cleaning-the-data.html#cb28-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Residential_Area&quot;</span>, habitat)){</span>
+<span id="cb28-12"><a href="cleaning-the-data.html#cb28-12" aria-hidden="true" tabindex="-1"></a>    residential_area [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-13"><a href="cleaning-the-data.html#cb28-13" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-14"><a href="cleaning-the-data.html#cb28-14" aria-hidden="true" tabindex="-1"></a>    residential_area [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-15"><a href="cleaning-the-data.html#cb28-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-16"><a href="cleaning-the-data.html#cb28-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-17"><a href="cleaning-the-data.html#cb28-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Parking_lot&quot;</span>, habitat)){</span>
+<span id="cb28-18"><a href="cleaning-the-data.html#cb28-18" aria-hidden="true" tabindex="-1"></a>    parking_lot [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-19"><a href="cleaning-the-data.html#cb28-19" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-20"><a href="cleaning-the-data.html#cb28-20" aria-hidden="true" tabindex="-1"></a>    parking_lot [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-21"><a href="cleaning-the-data.html#cb28-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-22"><a href="cleaning-the-data.html#cb28-22" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-23"><a href="cleaning-the-data.html#cb28-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Wetland&quot;</span>, habitat)){</span>
+<span id="cb28-24"><a href="cleaning-the-data.html#cb28-24" aria-hidden="true" tabindex="-1"></a>    wetland [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-25"><a href="cleaning-the-data.html#cb28-25" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-26"><a href="cleaning-the-data.html#cb28-26" aria-hidden="true" tabindex="-1"></a>    wetland [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-27"><a href="cleaning-the-data.html#cb28-27" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-28"><a href="cleaning-the-data.html#cb28-28" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-29"><a href="cleaning-the-data.html#cb28-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Forested_Area&quot;</span>, habitat)){</span>
+<span id="cb28-30"><a href="cleaning-the-data.html#cb28-30" aria-hidden="true" tabindex="-1"></a>    forested_area [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-31"><a href="cleaning-the-data.html#cb28-31" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-32"><a href="cleaning-the-data.html#cb28-32" aria-hidden="true" tabindex="-1"></a>    forested_area [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-33"><a href="cleaning-the-data.html#cb28-33" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-34"><a href="cleaning-the-data.html#cb28-34" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-35"><a href="cleaning-the-data.html#cb28-35" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Neighborhood_Park&quot;</span>, habitat)){</span>
+<span id="cb28-36"><a href="cleaning-the-data.html#cb28-36" aria-hidden="true" tabindex="-1"></a>    neighborhood_park [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-37"><a href="cleaning-the-data.html#cb28-37" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-38"><a href="cleaning-the-data.html#cb28-38" aria-hidden="true" tabindex="-1"></a>    neighborhood_park[i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-39"><a href="cleaning-the-data.html#cb28-39" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-40"><a href="cleaning-the-data.html#cb28-40" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-41"><a href="cleaning-the-data.html#cb28-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Other&quot;</span>, habitat)){</span>
+<span id="cb28-42"><a href="cleaning-the-data.html#cb28-42" aria-hidden="true" tabindex="-1"></a>    other_habitat [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-43"><a href="cleaning-the-data.html#cb28-43" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-44"><a href="cleaning-the-data.html#cb28-44" aria-hidden="true" tabindex="-1"></a>    other_habitat [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-45"><a href="cleaning-the-data.html#cb28-45" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-46"><a href="cleaning-the-data.html#cb28-46" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-47"><a href="cleaning-the-data.html#cb28-47" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-48"><a href="cleaning-the-data.html#cb28-48" aria-hidden="true" tabindex="-1"></a>  feelings <span class="ot">&lt;-</span> <span class="fu">pull</span>(sightings_b, Feelings)[i]</span>
+<span id="cb28-49"><a href="cleaning-the-data.html#cb28-49" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-50"><a href="cleaning-the-data.html#cb28-50" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Happy&quot;</span>, feelings)){</span>
+<span id="cb28-51"><a href="cleaning-the-data.html#cb28-51" aria-hidden="true" tabindex="-1"></a>    happy [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-52"><a href="cleaning-the-data.html#cb28-52" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-53"><a href="cleaning-the-data.html#cb28-53" aria-hidden="true" tabindex="-1"></a>    happy [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-54"><a href="cleaning-the-data.html#cb28-54" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-55"><a href="cleaning-the-data.html#cb28-55" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-56"><a href="cleaning-the-data.html#cb28-56" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Lucky&quot;</span>, feelings)){</span>
+<span id="cb28-57"><a href="cleaning-the-data.html#cb28-57" aria-hidden="true" tabindex="-1"></a>    lucky [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-58"><a href="cleaning-the-data.html#cb28-58" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-59"><a href="cleaning-the-data.html#cb28-59" aria-hidden="true" tabindex="-1"></a>    lucky [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-60"><a href="cleaning-the-data.html#cb28-60" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-61"><a href="cleaning-the-data.html#cb28-61" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-62"><a href="cleaning-the-data.html#cb28-62" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Scared&quot;</span>, feelings)){</span>
+<span id="cb28-63"><a href="cleaning-the-data.html#cb28-63" aria-hidden="true" tabindex="-1"></a>    scared [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-64"><a href="cleaning-the-data.html#cb28-64" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-65"><a href="cleaning-the-data.html#cb28-65" aria-hidden="true" tabindex="-1"></a>    scared [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-66"><a href="cleaning-the-data.html#cb28-66" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-67"><a href="cleaning-the-data.html#cb28-67" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-68"><a href="cleaning-the-data.html#cb28-68" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Worried&quot;</span>, feelings)){</span>
+<span id="cb28-69"><a href="cleaning-the-data.html#cb28-69" aria-hidden="true" tabindex="-1"></a>    worried [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-70"><a href="cleaning-the-data.html#cb28-70" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-71"><a href="cleaning-the-data.html#cb28-71" aria-hidden="true" tabindex="-1"></a>    worried [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-72"><a href="cleaning-the-data.html#cb28-72" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-73"><a href="cleaning-the-data.html#cb28-73" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-74"><a href="cleaning-the-data.html#cb28-74" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Indefferent&quot;</span>, feelings)){</span>
+<span id="cb28-75"><a href="cleaning-the-data.html#cb28-75" aria-hidden="true" tabindex="-1"></a>    indifferent [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-76"><a href="cleaning-the-data.html#cb28-76" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-77"><a href="cleaning-the-data.html#cb28-77" aria-hidden="true" tabindex="-1"></a>    indifferent [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-78"><a href="cleaning-the-data.html#cb28-78" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-79"><a href="cleaning-the-data.html#cb28-79" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-80"><a href="cleaning-the-data.html#cb28-80" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Angry&quot;</span>, feelings)){</span>
+<span id="cb28-81"><a href="cleaning-the-data.html#cb28-81" aria-hidden="true" tabindex="-1"></a>    angry [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-82"><a href="cleaning-the-data.html#cb28-82" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-83"><a href="cleaning-the-data.html#cb28-83" aria-hidden="true" tabindex="-1"></a>    angry [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-84"><a href="cleaning-the-data.html#cb28-84" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-85"><a href="cleaning-the-data.html#cb28-85" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-86"><a href="cleaning-the-data.html#cb28-86" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">grepl</span>(<span class="st">&quot;Other&quot;</span>, feelings)){</span>
+<span id="cb28-87"><a href="cleaning-the-data.html#cb28-87" aria-hidden="true" tabindex="-1"></a>    other_feelings [i] <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb28-88"><a href="cleaning-the-data.html#cb28-88" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-89"><a href="cleaning-the-data.html#cb28-89" aria-hidden="true" tabindex="-1"></a>    other_feelings [i] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb28-90"><a href="cleaning-the-data.html#cb28-90" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-91"><a href="cleaning-the-data.html#cb28-91" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-92"><a href="cleaning-the-data.html#cb28-92" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb28-93"><a href="cleaning-the-data.html#cb28-93" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>And add these to our new data frame.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="cleaning-the-data.html#cb29-1" aria-hidden="true" tabindex="-1"></a>sightings_b_h_f <span class="ot">&lt;-</span> sightings_b <span class="sc">%&gt;%</span> </span>
+<span id="cb29-2"><a href="cleaning-the-data.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Street                 =</span> street,</span>
+<span id="cb29-3"><a href="cleaning-the-data.html#cb29-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">Residential_area       =</span> residential_area,</span>
+<span id="cb29-4"><a href="cleaning-the-data.html#cb29-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">Parking_lot            =</span> parking_lot,</span>
+<span id="cb29-5"><a href="cleaning-the-data.html#cb29-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">Wetland                =</span> wetland,</span>
+<span id="cb29-6"><a href="cleaning-the-data.html#cb29-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">Forested_area          =</span> forested_area,</span>
+<span id="cb29-7"><a href="cleaning-the-data.html#cb29-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">Neighborhood_park      =</span> neighborhood_park,</span>
+<span id="cb29-8"><a href="cleaning-the-data.html#cb29-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">Other_habitat          =</span> other_habitat) <span class="sc">%&gt;%</span> </span>
+<span id="cb29-9"><a href="cleaning-the-data.html#cb29-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Habitat) <span class="sc">%&gt;%</span> </span>
+<span id="cb29-10"><a href="cleaning-the-data.html#cb29-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Happy               =</span> happy,</span>
+<span id="cb29-11"><a href="cleaning-the-data.html#cb29-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">Lucky               =</span> lucky,</span>
+<span id="cb29-12"><a href="cleaning-the-data.html#cb29-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">Scared              =</span> scared,</span>
+<span id="cb29-13"><a href="cleaning-the-data.html#cb29-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">Worried             =</span> worried,</span>
+<span id="cb29-14"><a href="cleaning-the-data.html#cb29-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">Indifferent         =</span> indifferent,</span>
+<span id="cb29-15"><a href="cleaning-the-data.html#cb29-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">Angry               =</span> angry,</span>
+<span id="cb29-16"><a href="cleaning-the-data.html#cb29-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">Other_feelings      =</span> other_feelings) <span class="sc">%&gt;%</span> </span>
+<span id="cb29-17"><a href="cleaning-the-data.html#cb29-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>Feelings)</span></code></pre></div>
+<p>Finally, delete all those intermediate vectors.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="cleaning-the-data.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(habitat)</span>
+<span id="cb30-2"><a href="cleaning-the-data.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(street)</span>
+<span id="cb30-3"><a href="cleaning-the-data.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(residential_area)</span>
+<span id="cb30-4"><a href="cleaning-the-data.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(parking_lot)</span>
+<span id="cb30-5"><a href="cleaning-the-data.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(wetland)</span>
+<span id="cb30-6"><a href="cleaning-the-data.html#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(forested_area)</span>
+<span id="cb30-7"><a href="cleaning-the-data.html#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(neighborhood_park)</span>
+<span id="cb30-8"><a href="cleaning-the-data.html#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(other_habitat)</span>
+<span id="cb30-9"><a href="cleaning-the-data.html#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-10"><a href="cleaning-the-data.html#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(feelings)</span>
+<span id="cb30-11"><a href="cleaning-the-data.html#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(happy)</span>
+<span id="cb30-12"><a href="cleaning-the-data.html#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(lucky)</span>
+<span id="cb30-13"><a href="cleaning-the-data.html#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(scared)</span>
+<span id="cb30-14"><a href="cleaning-the-data.html#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(worried)</span>
+<span id="cb30-15"><a href="cleaning-the-data.html#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(indifferent)</span>
+<span id="cb30-16"><a href="cleaning-the-data.html#cb30-16" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(angry)</span>
+<span id="cb30-17"><a href="cleaning-the-data.html#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(other_feelings)</span></code></pre></div>
+<p>And the old sightings data frame.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="cleaning-the-data.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(sightings_b)</span></code></pre></div>
+<p>Now we are done coding behaviors, habitats, and feelings. On to location!</p>
+</div>
+<div id="removing-false-locations" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Removing false locations<a href="cleaning-the-data.html#removing-false-locations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Some of the people filling out the survey were unable to get the map to work. Therefore, the location given is actually just the default location of the marker. So, we will change these values to NA’s instead of having lots of points at the same (wrong) place.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="cleaning-the-data.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>sightings_length){</span>
+<span id="cb32-2"><a href="cleaning-the-data.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> ((<span class="fu">pull</span>(sightings_b_h_f, x_long)[i] <span class="sc">==</span>  <span class="sc">-</span><span class="fl">97.3140509999967</span> <span class="sc">|</span></span>
+<span id="cb32-3"><a href="cleaning-the-data.html#cb32-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pull</span>(sightings_b_h_f, x_long)[i] <span class="sc">==</span> <span class="sc">-</span><span class="fl">97.3140509999934</span> <span class="sc">|</span></span>
+<span id="cb32-4"><a href="cleaning-the-data.html#cb32-4" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pull</span>(sightings_b_h_f, x_long)[i] <span class="sc">==</span> <span class="sc">-</span><span class="fl">97.314051</span>) <span class="sc">&amp;</span></span>
+<span id="cb32-5"><a href="cleaning-the-data.html#cb32-5" aria-hidden="true" tabindex="-1"></a>      (<span class="fu">pull</span>(sightings_b_h_f, y_lat)[i] <span class="sc">==</span>  <span class="fl">37.682074</span> <span class="sc">|</span></span>
+<span id="cb32-6"><a href="cleaning-the-data.html#cb32-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pull</span>(sightings_b_h_f, y_lat)[i] <span class="sc">==</span> <span class="fl">37.6820739999987</span><span class="sc">|</span></span>
+<span id="cb32-7"><a href="cleaning-the-data.html#cb32-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">pull</span>(sightings_b_h_f, y_lat)[i] <span class="sc">==</span> <span class="fl">37.6820739999974</span>)){</span>
+<span id="cb32-8"><a href="cleaning-the-data.html#cb32-8" aria-hidden="true" tabindex="-1"></a>    sightings_b_h_f<span class="sc">$</span>x_long[i]<span class="ot">=</span><span class="cn">NA</span></span>
+<span id="cb32-9"><a href="cleaning-the-data.html#cb32-9" aria-hidden="true" tabindex="-1"></a>    sightings_b_h_f<span class="sc">$</span>y_lat[i]<span class="ot">=</span><span class="cn">NA</span></span>
+<span id="cb32-10"><a href="cleaning-the-data.html#cb32-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb32-11"><a href="cleaning-the-data.html#cb32-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="building-the-database.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="preliminary-visualizations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-clean_data.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

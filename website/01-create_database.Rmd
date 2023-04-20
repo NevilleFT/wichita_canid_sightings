@@ -13,9 +13,7 @@ library(DBI)
 Next, we create our database `sighting_db` and establish a connection to it in the same line.
 
 ```{r create, eval = F}
-
 sighting_db <- dbConnect(RSQLite::SQLite(), "sighting_db.db")
-
 ```
 
 ## Creating tables
@@ -27,14 +25,12 @@ Our next step is to create the tables that we want to include in our database. T
 We will start with our species table. Our species table includes our species of interest, coyote, red fox, and bobcat, as well as a category for other. For each, we have their family, genus, and species. "Other" will have no such identifying information, but later may include grey foxes, skunks, raccoons, possums, etc. Species is our primary key and will be referenced as a foreign key in our sightings table.
 
 ```{r create2, eval = F}
-
 dbExecute(sighting_db, "CREATE TABLE species (
           species varchar(10) PRIMARY KEY CHECK (species IN ('Coyote', 'Red Fox', 'Bobcat', 'Other')),
           species_latin varchar(10) CHECK (species_latin IN ('latrans', 'vulpes', 'rufus')),
           genus_latin varchar(10) CHECK (genus_latin IN ('Canis', 'Vulpes', 'Lynx')),
           family_latin varchar(10) CHECK (family_latin IN ('Canidae', 'Felidae'))
           );")
-
 ```
 
 ### Zip code table
@@ -42,14 +38,12 @@ dbExecute(sighting_db, "CREATE TABLE species (
 Next we will build our zip code table. This will relate to the home zip code that people fill out in the survey. We hope this allows us to better understand where reports are coming from and locations we may need to target to increase reports. Each zip code will have an average annual income, average building density, and proportion of population that is white. 
 
 ```{r create3, eval = F}
-
 dbExecute(sighting_db, "CREATE TABLE zip_code (
           zip_code integer(5) PRIMARY KEY,
           avg_income double,
           building_density double,
           proportion_white double
           );")
-
 ```
 
 ### Date table
@@ -57,21 +51,18 @@ dbExecute(sighting_db, "CREATE TABLE zip_code (
 Our third table will include attributes about when the sighting was recorded. The date along with the temperature and precipitation in Wichita (ICT) will be recorded. 
 
 ```{r create4, eval = F}
-
 dbExecute(sighting_db, "CREATE TABLE date (
           date text PRIMARY KEY,
           temp_in_ICT float,
           precip_in_ICT float
           );")
-
 ```
 
 ### Sighting table
 
 Our last is our most important table. This is the table that will be given from the data that will be collected from the [sighting reporting form](https://arcg.is/00Omra).
 
-```{r code2, eval = F, include = T}
-
+```{r create5, eval = F, include = T}
 dbExecute(sighting_db, "CREATE TABLE sighting_reports (
           sighting_id integer PRIMARY KEY AUTOINCREMENT,
           species varchar(10) CHECK (species IN ('Coyote', 'Red Fox', 'Bobcat', 'Other')),
@@ -89,7 +80,6 @@ dbExecute(sighting_db, "CREATE TABLE sighting_reports (
           FOREIGN KEY (species) REFERENCES species(species)
           FOREIGN KEY (zip_code) REFERENCES zip_code(zip_code)
           );")
-
 ```
 
 ## Database Diagram
@@ -97,12 +87,5 @@ dbExecute(sighting_db, "CREATE TABLE sighting_reports (
 Here is what our database looks like in diagram form.
 
 ```{r diagram, eval = T, echo = F, message = F, out.width = '80%', fig.align = 'center', fig.cap = "Diagram of Tables in Sightings Database"}
-
 knitr::include_graphics("diagram.jpg")
-
 ```
-
-
-
-
-

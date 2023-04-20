@@ -1,0 +1,595 @@
+"","ObjectID","What.species.of.animal.did.you.see.","What.was.the.animal.doing.","Please.describe.the.habitat.the.animal.was.observed.in","How.many.animals.of.this.species.did.you.see.in.total.","Complete.this.sentence..Seeing.this.animal.made.me.feel.","x","y"
+"1",5,"Coyote","Moving_Fast","Residential_Area","1","Other",-97.5355004461202,37.7001629735393
+"2",6,"Red Fox","Moving_Slow","Residential_Area","1","Happy",-97.4711055556538,37.7446862680814
+"3",10,"Other","Other","Other","1","Indefferent",-97.2049352500727,37.9153584528022
+"4",15,"Red Fox","Moving_Slow","Residential_Area,Other","1","Happy",-97.46065794262,37.6467212183641
+"5",17,"Coyote","Moving_Slow,Mostly_Stationary_Resting","Residential_Area","1","Worried",-97.1493615558372,37.7284440587866
+"6",18,"Coyote","Moving_Fast,Vocalizing,Hunting_Eating,Interacting_with_human_pet","Street,Residential_Area,Wetland","3+","Scared,Worried",-97.2852526919488,37.6074312174058
+"7",20,"Other","Hunting_Eating","Residential_Area","1","Lucky,Indefferent",-97.3237989483009,37.7032002982657
+"8",21,"Red Fox","Moving_Fast","Residential_Area","1","Indefferent",-97.2699263493683,37.7434092022537
+"9",22,"Red Fox","Mostly_Stationary_Resting,Vocalizing","Residential_Area","3+","Happy",-97.4282393224757,37.7203810384893
+"10",23,"Red Fox","Hunting_Eating","Residential_Area","1","Indefferent",-97.3618582136519,37.6955049326845
+"11",24,"Coyote","Moving_Slow,Mostly_Stationary_Resting","Residential_Area,Wetland","1","Happy",-97.4631280685192,37.69296279754
+"12",25,"Red Fox","Moving_Fast","Street","1","Happy",-97.3906974573986,37.7700337437513
+"13",26,"Coyote","Moving_Fast","Other","1","Worried",-97.314051,37.682074
+"14",27,"Coyote","Moving_Slow","Residential_Area","1","Worried",-97.3450005336657,37.6380989485855
+"15",28,"Red Fox","Moving_Slow","Street,Residential_Area","1","Indefferent",-97.2116128742585,37.7587191346871
+"16",29,"Red Fox","Moving_Slow","Street","1","Lucky,Indefferent",-97.0863294584832,37.60318093819
+"17",30,"Coyote","Moving_Slow","Neighborhood_Park","1","Worried",-97.3958519532031,37.8224917625879
+"18",31,"Coyote","Moving_Slow,Hunting_Eating","Street,Residential_Area","1","Worried,Indefferent,Other",-97.3986859739287,37.6421906930951
+"19",32,"Red Fox","Moving_Slow","Residential_Area","1","Worried",-97.269266779803,37.7194936730336
+"20",33,"Red Fox","Moving_Fast","Street","1","Happy,Lucky",-97.314051,37.682074
+"21",34,"Red Fox","Moving_Slow","Residential_Area","2","Happy",-97.314051,37.682074
+"22",35,"Red Fox","Other","Residential_Area,Forested_Area,Neighborhood_Park","3+","Lucky,Worried",-97.314051,37.682074
+"23",36,"Red Fox","Other","Wetland","2","Happy,Lucky",-97.2405832998551,37.6310734426808
+"24",37,"Coyote","Moving_Fast,Hunting_Eating","Forested_Area","1","Happy,Lucky",-97.4072597391056,37.6874538569673
+"25",38,"Red Fox","Moving_Slow","Wetland","1","Happy",-97.5466821122468,37.6798438220147
+"26",39,"Red Fox","Mostly_Stationary_Resting,Other","Residential_Area","3+","Happy,Lucky,Other",-97.4145319055647,37.84658696448
+"27",40,"Coyote","Moving_Fast,Vocalizing,Hunting_Eating","Residential_Area,Other","1","Indefferent",-97.4911885896707,37.6873700660767
+"28",41,"Coyote","Other","Street","1","Scared,Other",-97.6897428514954,37.6761772124965
+"29",42,"Red Fox","Moving_Fast","Other","1","Happy",-97.314051,37.682074
+"30",43,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy,Lucky",-97.4145888309076,37.7152498402243
+"31",44,"Red Fox","Moving_Fast","Residential_Area","1","Happy,Lucky",-97.5145601811982,37.7599279989845
+"32",45,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Residential_Area","1","Happy,Lucky",-97.3618842891177,37.7254693984527
+"33",46,"Red Fox","Moving_Fast","Street","1","Worried",-97.1312983116963,37.7174722805539
+"34",47,"Red Fox","Roadkill","Neighborhood_Park","1","Other",-97.3694826123768,37.7908200378559
+"35",48,"Coyote","Hunting_Eating","Other","1","Indefferent",-97.2487015435271,37.6387486357003
+"36",49,"Coyote","Moving_Slow,Hunting_Eating","Residential_Area","1","Worried",-97.3456105188254,37.7390487676243
+"37",50,"Coyote","Moving_Fast","Other","1","Indefferent",-96.9673545791728,37.768471346595
+"38",51,"Coyote","Moving_Slow","Residential_Area","1","Indefferent",-97.1683741527099,37.6005915065749
+"39",52,"Coyote","Moving_Slow","Residential_Area","1","Indefferent",-97.2630192302451,37.5847213976646
+"40",53,"Red Fox","Mostly_Stationary_Resting","Street,Residential_Area","1","Happy",-97.458816794533,37.6372804059329
+"41",54,"Red Fox","Moving_Slow,Mostly_Stationary_Resting,Interacting_with_human_pet","Residential_Area","1","Lucky",-97.314051,37.682074
+"42",55,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Indefferent",-97.314051,37.682074
+"43",56,"Red Fox","Moving_Slow","Forested_Area","1","Happy",-97.6622489532655,38.1511213046306
+"44",57,"Red Fox","Moving_Fast,Hunting_Eating","Street,Neighborhood_Park","1","Happy",-97.7483082986935,37.7414435376011
+"45",58,"Red Fox","Moving_Slow","Residential_Area","1","Worried",-97.2798721585605,37.5841520425805
+"46",59,"Coyote","Moving_Slow,Mostly_Stationary_Resting,Other","Residential_Area","1","Lucky,Worried",-97.3190666381508,37.7063230387435
+"47",60,"Red Fox","Other","Street","3+","Worried",-97.314051,37.682074
+"48",61,"Coyote","Moving_Slow","Forested_Area","2","Worried",-97.5336282992481,37.679126915005
+"49",62,"Red Fox","Moving_Fast","Wetland,Other","1","Indefferent",-97.4952896895218,37.7578905659003
+"50",63,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.314051,37.682074
+"51",64,"Coyote","Moving_Fast","Residential_Area","1","Worried",-97.5067628189357,37.6692518074303
+"52",65,"Red Fox","Moving_Fast","Residential_Area","3+","Lucky",-97.314051,37.682074
+"53",66,"Red Fox","Other","Wetland,Other","1","Happy",-97.3932939290657,37.8231992542744
+"54",67,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Street,Residential_Area","3+","Happy",-97.5095072361108,37.6925344680426
+"55",68,"Coyote","Moving_Fast,Hunting_Eating","Street,Neighborhood_Park","1","Happy",-97.4909516232141,37.52345995311
+"56",69,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Happy",-97.578507698212,37.7406739673243
+"57",70,"Red Fox","Moving_Fast,Other","Residential_Area,Other","1","Worried,Other",-97.3266134714556,37.6435118896803
+"58",71,"Coyote","Mostly_Stationary_Resting","Residential_Area","2","Lucky",-97.2201552196864,37.6532823741266
+"59",72,"Coyote","Hunting_Eating,Other","Residential_Area,Other","1","Happy,Lucky,Other",-97.2205791707256,37.6684429367882
+"60",73,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Street","1","Other",-97.314051,37.682074
+"61",74,"Coyote","Moving_Fast","Street,Residential_Area","2","Happy,Lucky",-97.4108189770697,37.4844268181818
+"62",75,"Red Fox","Moving_Fast","Street","1","Worried,Other",-97.180778202467,37.8124837995609
+"63",76,"Red Fox","Interacting_with_human_pet","Residential_Area","1","Lucky,Worried",-97.793456516392,37.7172258029612
+"64",77,"Red Fox","Moving_Slow","Street","1","Lucky",-97.314051,37.682074
+"65",78,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Other",-97.3742549824327,37.7312617064786
+"66",79,"Red Fox","Interacting_with_human_pet","Other","1","Happy,Lucky",-97.3764919490111,37.728237833617
+"67",80,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.4533900589027,37.5778201737527
+"68",81,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Residential_Area,Neighborhood_Park","1","Happy,Lucky",-97.314051,37.682074
+"69",82,"Red Fox","Interacting_with_human_pet","Other","1","Happy",-97.314051,37.682074
+"70",83,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.314051,37.682074
+"71",84,"Red Fox","Other","Residential_Area,Other","1","Happy,Lucky",-97.314051,37.682074
+"72",85,"Red Fox","Moving_Fast","Wetland,Neighborhood_Park","1","Lucky",-97.2265933112208,37.6141837434305
+"73",86,"Coyote","Moving_Slow,Moving_Fast,Mostly_Stationary_Resting","Street,Neighborhood_Park","1","Lucky,Worried,Indefferent",-97.2840761274003,37.6860315300133
+"74",87,"Red Fox","Moving_Fast,Vocalizing","Residential_Area","2","Indefferent",-97.4908912852224,37.6876786651442
+"75",88,"Coyote","Moving_Fast","Street","1","Happy",-97.2961298761685,37.5997350820087
+"76",89,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","1","Other",-97.3160924462998,37.7049371169698
+"77",90,"Red Fox","Moving_Slow","Residential_Area","3+","Happy",-97.2417586522291,37.6891018288656
+"78",91,"Coyote","Moving_Fast","Neighborhood_Park","1","Lucky",-97.2627025410774,37.501784359807
+"79",92,"Red Fox","Moving_Slow","Residential_Area","1","Happy",-97.314051,37.682074
+"80",93,"Coyote","Mostly_Stationary_Resting","Street","1","Happy",-97.314051,37.682074
+"81",94,"Red Fox","Other","Residential_Area","1","Happy",-97.314051,37.682074
+"82",95,"Red Fox","Moving_Slow","Residential_Area","1","Happy,Lucky",-97.4070218848369,37.8093692341046
+"83",96,"Red Fox","Mostly_Stationary_Resting","Neighborhood_Park","1","Happy",-97.561383679916,37.6983464631575
+"84",97,"Red Fox","Hunting_Eating","Wetland","3+","Happy",-97.1762538291037,37.6010843892741
+"85",98,"Red Fox","Hunting_Eating","Residential_Area","2","Happy,Lucky",-97.3388629947157,37.7420077417612
+"86",99,"Red Fox","Moving_Fast","Wetland","1","Happy",-97.314051,37.682074
+"87",100,"Red Fox","Mostly_Stationary_Resting","Residential_Area","3+","Happy",-97.4502361209995,37.7362959734245
+"88",101,"Red Fox","Mostly_Stationary_Resting","Residential_Area,Wetland","2","Worried",-97.5047763892731,37.7560887737637
+"89",102,"Red Fox","Moving_Fast","Neighborhood_Park","1","Happy",-97.3593288289894,37.6060120149995
+"90",103,"Coyote","Moving_Slow","Residential_Area","1","Worried",-97.2511327914869,37.7897117219245
+"91",104,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","1","Happy",-97.3814609804526,37.6887541287496
+"92",105,"Red Fox","Moving_Fast","Residential_Area","1","Indefferent",-97.7225674643695,37.3671483863762
+"93",106,"Red Fox","Moving_Fast","Residential_Area,Other","1","Indefferent",-97.3883682997462,37.721813879509
+"94",107,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Lucky",-97.4205833985839,37.6835280016047
+"95",108,"Red Fox","Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Hunting_Eating","Residential_Area","3+","Other",-97.3019671647085,37.7701151810038
+"96",109,"Coyote","Vocalizing","Residential_Area","1","Worried",-97.3848161980135,37.7932594911154
+"97",110,"Coyote","Hunting_Eating","Neighborhood_Park","1","Happy",-97.4333341651995,37.6491163259154
+"98",111,"Red Fox","Moving_Fast","Residential_Area,Neighborhood_Park","1","Happy,Lucky",-97.3596530104315,37.7352855405099
+"99",112,"Red Fox","Other","Residential_Area","1","Happy",-97.4233749988536,37.7657131482526
+"100",113,"Coyote","Other","Residential_Area,Other","2","Other",-97.3550620606321,37.717451842461
+"101",114,"Red Fox","Moving_Fast","Residential_Area","1","Indefferent",-97.5055451856212,37.6874675495966
+"102",115,"Red Fox","Moving_Fast","Residential_Area","1","Happy,Lucky",-97.314051,37.682074
+"103",116,"Coyote","Mostly_Stationary_Resting","Other","2","Happy",-97.4910788672147,37.6836521206804
+"104",117,"Red Fox","Moving_Fast","Neighborhood_Park","1","Other",-97.314051,37.682074
+"105",118,"Red Fox","Hunting_Eating","Residential_Area","1","Happy",-97.2946966416867,37.5026859272354
+"106",119,"Red Fox","Moving_Fast","Residential_Area","1","Lucky",-97.216566578121,37.6386505564791
+"107",120,"Red Fox","Moving_Fast,Mostly_Stationary_Resting","Residential_Area,Wetland","2","Happy,Worried",-97.1868713456754,37.5184335080594
+"108",121,"Red Fox","Vocalizing,Interacting_with_human_pet","Residential_Area","1","Indefferent",-97.4819733102528,37.7221877987037
+"109",122,"Coyote","Moving_Slow,Hunting_Eating","Residential_Area","1","Lucky",-97.3838664954137,37.6464719204805
+"110",123,"Coyote","Moving_Slow,Mostly_Stationary_Resting","Neighborhood_Park","2","Happy,Lucky,Other",-97.3903042074853,37.6640524243547
+"111",124,"Coyote","Mostly_Stationary_Resting","Residential_Area","1","Indefferent",-97.4918117896952,37.783913725548
+"112",125,"Coyote","Mostly_Stationary_Resting,Interacting_with_human_pet","Neighborhood_Park","2","Other",-97.314051,37.682074
+"113",126,"Red Fox","Hunting_Eating","Neighborhood_Park","2","Happy",-97.4189150042179,37.6241441575531
+"114",127,"Red Fox","Moving_Slow","Residential_Area","2","Happy",-97.1482402157294,37.5919410941576
+"115",128,"Red Fox","Moving_Fast","Neighborhood_Park","1","Happy",-97.2996774408013,37.5141270523867
+"116",129,"Red Fox","Moving_Slow","Residential_Area","1","Indefferent",-97.3773057810599,37.7124315620795
+"117",130,"Red Fox","Mostly_Stationary_Resting","Forested_Area","1","Happy",-97.148084351017,37.7050882671334
+"118",131,"Coyote","Vocalizing","Wetland,Forested_Area,Neighborhood_Park","2","Happy",-97.342769908419,37.774971838515
+"119",132,"Red Fox","Vocalizing","Wetland,Forested_Area,Neighborhood_Park","2","Happy",-97.2874149287081,37.7822066036948
+"120",133,"Red Fox","Moving_Slow,Moving_Fast","Residential_Area","1","Indefferent",-97.4886040597192,37.6826100443939
+"121",134,"Coyote","Mostly_Stationary_Resting","Neighborhood_Park","1","Indefferent",-97.5651392834722,37.6817143923214
+"122",135,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.1976064869374,37.5530855622033
+"123",136,"Red Fox","Moving_Fast,Interacting_with_human_pet","Street,Residential_Area","1","Indefferent",-97.314051,37.682074
+"124",137,"Coyote","Moving_Fast,Hunting_Eating","Wetland,Forested_Area","1","Happy",-97.6460146623083,37.5465336583587
+"125",138,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Street,Wetland,Neighborhood_Park","1","Happy,Lucky",-97.311129673442,37.7673248066368
+"126",139,"Red Fox","Moving_Fast,Hunting_Eating","Wetland,Forested_Area","1","Happy",-97.512161024,37.5447280046569
+"127",140,"Coyote","Interacting_with_human_pet","Residential_Area","2","Angry",-97.0966168048589,37.7249260566386
+"128",141,"Red Fox","Hunting_Eating","Residential_Area","1","Happy",-97.065949117862,37.711188395229
+"129",142,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.2036341361009,37.9087227608048
+"130",143,"Red Fox","Moving_Slow","Residential_Area","1","Happy",-97.342044753172,37.7402642767302
+"131",144,"Bobcat","Mostly_Stationary_Resting,Hunting_Eating","Wetland,Forested_Area","1","Happy",-97.708861315043,37.6018202433222
+"132",145,"Red Fox","Moving_Fast","Street","1","Happy",-97.4088894376888,37.5745955566423
+"133",146,"Coyote","Moving_Slow","Street,Parking_lot,Other","2","Worried",-97.4649862731033,37.7977735196597
+"134",147,"Coyote","Moving_Fast","Street,Parking_lot,Other","1","Worried",-97.3646831352515,37.641536303441
+"135",148,"Red Fox","Moving_Fast","Street,Residential_Area,Other","1","Happy",-97.3330603788975,37.7175120900933
+"136",149,"Red Fox","Moving_Slow","Residential_Area","1","Indefferent",-97.1722975898914,37.6489441577784
+"137",150,"Red Fox","Moving_Slow","Residential_Area","1","Other",-97.4690396578356,37.6952207091062
+"138",151,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy,Lucky",-97.314051,37.682074
+"139",152,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Happy",-97.314051,37.682074
+"140",153,"Red Fox","Hunting_Eating","Residential_Area","1","Happy",-97.3252695586946,37.7402006554433
+"141",154,"Red Fox","Moving_Fast","Residential_Area","1","Happy,Worried",-97.6399771075592,37.7891479971392
+"142",155,"Red Fox","Moving_Fast","Street,Residential_Area,Forested_Area","1","Happy,Lucky",-97.3058878235061,37.5431604089861
+"143",156,"Red Fox","Moving_Fast","Residential_Area,Neighborhood_Park","3+","Worried",-97.2263780517837,37.7619054924977
+"144",157,"Red Fox","Moving_Slow","Street,Residential_Area","1","Worried",-97.2326643141069,37.7186352155738
+"145",158,"Red Fox","Moving_Slow,Moving_Fast","Street,Residential_Area,Wetland,Other","1","Happy",-97.1951486561539,37.5911743015958
+"146",159,"Red Fox","Moving_Fast","Residential_Area,Other","1","Happy,Lucky",-97.428120271199,37.4651443423752
+"147",160,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Neighborhood_Park","1","Happy,Lucky",-97.175305596533,37.761228211042
+"148",161,"Red Fox","Mostly_Stationary_Resting","Forested_Area","3+","Lucky",-97.2814296754062,37.6170077958927
+"149",162,"Red Fox","Moving_Fast,Mostly_Stationary_Resting,Hunting_Eating","Street,Residential_Area","1","Lucky,Scared,Worried",-97.2542493107131,37.7752155925822
+"150",163,"Red Fox","Moving_Fast,Hunting_Eating","Street,Residential_Area","1","Happy,Lucky",-97.5123291950248,37.7441902701971
+"151",164,"Red Fox","Moving_Slow","Street","1","Happy,Lucky",-97.2760981056039,37.6092973983521
+"152",165,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy",-97.0822303950029,37.7245564788661
+"153",166,"Coyote","Other","Residential_Area","1","Indefferent",-97.1128054202548,37.6948808288508
+"154",167,"Coyote","Moving_Slow","Residential_Area,Wetland","1","Other",-97.43154440189,37.6097903083094
+"155",168,"Coyote","Moving_Slow","Wetland","1","Other",-97.2228057074818,37.7494239912241
+"156",169,"Red Fox","Moving_Fast","Street,Residential_Area,Forested_Area,Neighborhood_Park,Other","1","Worried,Indefferent",-97.0442968969872,37.7363877827286
+"157",170,"Red Fox","Moving_Fast,Mostly_Stationary_Resting","Forested_Area","1","Happy",-97.1658509260525,37.5357687081586
+"158",171,"Red Fox","Moving_Fast","Street","1","Indefferent",-97.0772263442412,37.6772535058531
+"159",172,"Red Fox","Moving_Slow","Street,Residential_Area","1","Indefferent",-97.2995224601934,37.7971359688262
+"160",173,"Red Fox","Moving_Slow","Street,Residential_Area","1","Indefferent",-97.2837051250673,37.8182329593237
+"161",174,"Red Fox","Moving_Slow","Street,Residential_Area","1","Indefferent",-97.2881102976938,37.8077697755076
+"162",175,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.3123688644908,37.5466127161308
+"163",176,"Coyote","Mostly_Stationary_Resting","Other","1","Other",-97.314051,37.682074
+"164",177,"Red Fox","Interacting_with_human_pet","Residential_Area","1","Happy",-97.316313592513,37.6630315629888
+"165",178,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Happy,Lucky",-97.3100166804375,37.6248139740617
+"166",179,"Red Fox","Moving_Fast","Residential_Area","1","Happy,Lucky",-97.3170878924798,37.7606044565837
+"167",180,"Red Fox","Moving_Fast","Residential_Area","1","Happy,Lucky",-97.2174673141794,37.6779422857056
+"168",181,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy,Lucky",-97.2873049804613,37.7931190795831
+"169",182,"Red Fox","Hunting_Eating","Residential_Area","1","Happy",-97.4119267362077,37.7403514684851
+"170",183,"Red Fox","Hunting_Eating","Other","2","Happy",-97.4428239105665,37.6002934278908
+"171",184,"Red Fox","Moving_Slow,Moving_Fast","Residential_Area","1","Happy,Lucky",-97.1597819726554,37.5595649698605
+"172",185,"Red Fox","Moving_Slow,Other","Other","1","Happy,Lucky",-97.3880334491541,37.6536738566985
+"173",186,"Red Fox","Moving_Fast","Residential_Area","2","Happy",-97.4082373726069,37.6941773264944
+"174",187,"Coyote","Moving_Slow","Neighborhood_Park","2","Indefferent",-97.3817461737144,37.6992465518634
+"175",188,"Red Fox","Other","Residential_Area","1","Other",-97.2739970416002,37.6313412806439
+"176",189,"Coyote","Moving_Slow","Other","2","Other",-97.314051,37.682074
+"177",190,"Red Fox","Moving_Slow","Residential_Area","1","Worried",-97.314051,37.682074
+"178",191,"Red Fox","Other","Residential_Area","3+","Happy,Lucky",-97.6223442437333,37.6884647807818
+"179",192,"Red Fox","Roadkill","Street","1","Happy",-97.256949608743,37.7609632499818
+"180",193,"Other","Hunting_Eating","Residential_Area","3+","Indefferent",-97.314051,37.682074
+"181",194,"Red Fox","Other","Residential_Area","1","Indefferent",-97.314051,37.682074
+"182",195,"Red Fox","Moving_Slow,Moving_Fast,Mostly_Stationary_Resting","Residential_Area","1","Happy",-97.314051,37.682074
+"183",196,"Coyote","Vocalizing","Forested_Area","3+","Indefferent",-97.314051,37.682074
+"184",197,"Red Fox","Moving_Slow","Residential_Area","1","Lucky",-97.4462337036125,37.8014508423892
+"185",198,"Coyote","Mostly_Stationary_Resting","Residential_Area,Neighborhood_Park","2","Happy",-97.4321997639155,37.7896129085346
+"186",199,"Red Fox","Mostly_Stationary_Resting","Street,Residential_Area","3+","Happy,Lucky",-97.2129218065845,37.7078411549081
+"187",200,"Red Fox","Interacting_with_human_pet","Neighborhood_Park","3+","Other",-97.45162685721,37.6755890042387
+"188",201,"Coyote","Moving_Fast,Other","Street","1","Happy,Lucky",-97.1409987347668,37.7810593667101
+"189",202,"Coyote","Mostly_Stationary_Resting,Vocalizing","Neighborhood_Park","3+","Other",-97.314051,37.682074
+"190",203,"Red Fox","Moving_Fast,Hunting_Eating","Residential_Area","2","Happy,Lucky",-97.457201722906,37.7109779048539
+"191",204,"Red Fox","Other","Other","1","Happy",-97.314051,37.682074
+"192",205,"Red Fox","Moving_Slow","Street","1","Lucky",-97.4667372778448,37.6552373216507
+"193",206,"Red Fox","Other","Other","3+","Happy",-97.314051,37.682074
+"194",207,"Coyote","Other","Parking_lot,Forested_Area","1","Happy",-97.314051,37.682074
+"195",208,"Red Fox","Hunting_Eating","Residential_Area","1","Lucky",-97.397558534249,37.7829663044594
+"196",209,"Red Fox","Moving_Slow,Moving_Fast","Other","1","Happy",-97.1566113279886,37.680738950416
+"197",210,"Red Fox","Moving_Slow","Residential_Area","1","Indefferent",-97.0877139695424,37.6406916454178
+"198",211,"Other","Other","Other","3+","Other",-97.2190642560822,37.5890042851865
+"199",212,"Red Fox","Moving_Slow","Residential_Area","1","Other",-97.3620244605329,37.6817038970213
+"200",213,"Red Fox","Hunting_Eating","Residential_Area","2","Lucky,Worried",-97.314051,37.682074
+"201",214,"Coyote","Other","Neighborhood_Park","1","Indefferent",-97.2730453773198,37.6240917923462
+"202",215,"Bobcat","Other","Neighborhood_Park","1","Indefferent",-97.2514605220846,37.5988509889338
+"203",216,"Coyote","Other","Neighborhood_Park","1","Indefferent",-97.1787710864211,37.6468806061243
+"204",217,"Bobcat","Other","Neighborhood_Park","1","Indefferent",-97.2509097233247,37.6872488050264
+"205",218,"Coyote","Other","Neighborhood_Park","1","Indefferent",-97.1710474901277,37.667273553971
+"206",219,"Coyote","Interacting_with_human_pet","Neighborhood_Park","1","Indefferent",-97.3349039438012,37.6554325147236
+"207",220,"Red Fox","Mostly_Stationary_Resting","Street,Residential_Area","1","Happy",-97.314051,37.682074
+"208",221,"Coyote","Moving_Fast","Street","1","Worried",-97.2637138366418,37.6592710129593
+"209",222,"Red Fox","Vocalizing,Interacting_with_human_pet","Residential_Area","1","Happy,Lucky",-97.3179312754734,37.5678809948628
+"210",223,"Red Fox","Hunting_Eating,Other","Residential_Area","1","Other",-97.4545085036975,37.7012353228145
+"211",224,"Red Fox","Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Interacting_with_human_pet","Street,Residential_Area,Neighborhood_Park","3+","Happy,Lucky",-97.4168978179221,37.7155410944712
+"212",225,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Happy,Lucky,Other",-97.3846300268929,37.7154862224926
+"213",226,"Coyote","Moving_Slow","Residential_Area","1","Other",-97.4214960952395,37.7467260631312
+"214",227,"Red Fox","Mostly_Stationary_Resting","Neighborhood_Park","1","Happy",-97.314051,37.682074
+"215",228,"Red Fox","Moving_Slow","Residential_Area","1","Indefferent",-97.314051,37.682074
+"216",229,"Coyote","Moving_Slow","Residential_Area","1","Worried",-97.3077667275119,37.7462138112264
+"217",230,"Coyote","Moving_Slow","Residential_Area","1","Other",-97.314051,37.682074
+"218",231,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Residential_Area","2","Happy,Lucky",-97.2474029544827,37.529574245386
+"219",232,"Coyote","Mostly_Stationary_Resting","Neighborhood_Park","1","Happy",-97.3953200192653,37.7788039423974
+"220",233,"Red Fox","Moving_Slow,Moving_Fast,Vocalizing,Interacting_with_human_pet,Other","Residential_Area","2","Worried",-97.3837503165011,37.6729701463393
+"221",234,"Red Fox","Mostly_Stationary_Resting,Other","Street,Residential_Area","1","Happy",-97.472502291118,37.7838875433583
+"222",235,"Red Fox","Other","Neighborhood_Park","1","Happy,Lucky",-97.4151054326588,37.7112703383877
+"223",236,"Red Fox","Moving_Fast","Street","1","Worried",-97.1749478728421,37.7071435968192
+"224",237,"Red Fox","Moving_Fast","Neighborhood_Park","2","Happy",-97.3581591978218,37.6105162574439
+"225",238,"Coyote","Hunting_Eating","Residential_Area","2","Indefferent",-97.314051,37.682074
+"226",239,"Coyote","Moving_Fast","Street,Residential_Area,Forested_Area","2","Worried",-97.314051,37.682074
+"227",240,"Coyote","Moving_Slow","Residential_Area","1","Other",-97.314051,37.682074
+"228",241,"Red Fox","Moving_Fast,Mostly_Stationary_Resting,Hunting_Eating","Residential_Area,Neighborhood_Park","1","Happy",-97.0756966607743,37.7672520089765
+"229",242,"Red Fox","Mostly_Stationary_Resting","Residential_Area","2","Worried",-97.3128938838347,37.6945080769728
+"230",243,"Red Fox","Interacting_with_human_pet","Street,Residential_Area","1","Worried",-97.3087883365518,37.5742233443044
+"231",244,"Red Fox","Moving_Slow","Residential_Area","1","Worried",-97.314051,37.682074
+"232",245,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Happy",-97.314051,37.682074
+"233",246,"Red Fox","Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Interacting_with_human_pet","Street,Residential_Area,Parking_lot,Neighborhood_Park","3+","Angry,Other",-97.314051,37.682074
+"234",247,"Coyote","Moving_Slow,Moving_Fast,Hunting_Eating","Street,Residential_Area,Parking_lot,Forested_Area","2","Indefferent",-97.416310979956,37.7639473704738
+"235",248,"Red Fox","Moving_Slow","Residential_Area","1","Happy",-97.3603194288261,37.7357082953738
+"236",249,"Red Fox","Other","Street,Residential_Area","1","Happy",-97.3034250615239,37.6792697617409
+"237",250,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy",-97.4667433158311,37.6903765006001
+"238",251,"Coyote","Moving_Slow","Neighborhood_Park","3+","Happy,Worried",-97.0306861555423,37.7183002844491
+"239",252,"Red Fox","Interacting_with_human_pet","Residential_Area,Neighborhood_Park","1","Happy,Worried,Indefferent",-97.2999420679795,37.7711767913303
+"240",253,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Neighborhood_Park","1","Other",-97.2040550716912,37.7879018611488
+"241",254,"Coyote","Moving_Fast","Residential_Area","2","Other",-97.3090483611156,37.7738325643592
+"242",255,"Red Fox","Mostly_Stationary_Resting","Residential_Area","3+","Scared",-97.1812274321098,37.6261814658298
+"243",256,"Red Fox","Other","Residential_Area","1","Happy",-97.2459143354246,37.6523319844844
+"244",257,"Red Fox","Moving_Slow,Moving_Fast,Hunting_Eating","Residential_Area","2","Indefferent",-97.2802147429449,37.5573706978938
+"245",258,"Red Fox","Moving_Fast","Street,Residential_Area,Neighborhood_Park","1","Happy",-97.4098953410691,38.138258304784
+"246",259,"Coyote","Moving_Slow","Wetland,Forested_Area","3+","Indefferent",-97.2689505998078,37.8532916848129
+"247",260,"Coyote","Moving_Fast","Street","1","Happy",-97.2097480367471,37.6247534905847
+"248",261,"Red Fox","Moving_Slow","Neighborhood_Park","1","Lucky",-97.657157838113,37.7637794239007
+"249",262,"Red Fox","Moving_Slow","Residential_Area","1","Lucky",-97.4086658048624,37.735057431542
+"250",263,"Red Fox","Moving_Slow,Moving_Fast,Hunting_Eating","Neighborhood_Park,Other","1","Happy,Lucky,Worried",-97.314051,37.682074
+"251",264,"Red Fox","Moving_Slow","Neighborhood_Park","1","Happy",-97.6184298903415,37.6520832693941
+"252",265,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy",-97.0956064706582,37.6665139835679
+"253",266,"Red Fox","Moving_Fast","Residential_Area,Forested_Area,Neighborhood_Park","2","Indefferent",-97.2403047354666,37.5827229356759
+"254",267,"Red Fox","Moving_Fast","Residential_Area","1","Scared,Worried",-97.314051,37.682074
+"255",268,"Red Fox","Moving_Fast,Mostly_Stationary_Resting,Hunting_Eating","Residential_Area","3+","Happy,Lucky",-97.314051,37.682074
+"256",269,"Red Fox","Moving_Slow","Residential_Area","1","Lucky",-97.3461248921308,37.7156385435536
+"257",270,"Bobcat","Moving_Slow","Street,Residential_Area","1","Other",-94.7267857872342,39.0219409681053
+"258",271,"Coyote","Moving_Slow","Street,Residential_Area","1","Other",-94.9286420688617,39.0273723917213
+"259",272,"Red Fox","Hunting_Eating","Street","1","Indefferent",-97.314051,37.682074
+"260",273,"Coyote","Moving_Slow","Residential_Area","1","Happy,Lucky",-97.5250872658919,37.7563422794857
+"261",274,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Happy,Lucky",-97.3378139733991,37.668596243702
+"262",275,"Red Fox","Moving_Fast","Neighborhood_Park","1","Happy",-97.2354625671208,37.7373465938413
+"263",276,"Red Fox","Mostly_Stationary_Resting","Street,Residential_Area,Other","2","Happy",-97.450916425874,37.6605743169027
+"264",277,"Coyote","Moving_Slow,Mostly_Stationary_Resting,Interacting_with_human_pet","Forested_Area","1","Happy,Worried",-97.3340780031439,37.716681240214
+"265",278,"Coyote","Moving_Slow,Mostly_Stationary_Resting,Interacting_with_human_pet","Forested_Area","2","Indefferent",-97.2820250038073,37.5021628201208
+"266",279,"Red Fox","Moving_Slow,Mostly_Stationary_Resting,Other","Forested_Area","3+","Happy",-97.4957771568896,37.5089945907017
+"267",280,"Red Fox","Moving_Fast,Other","Street,Residential_Area,Neighborhood_Park","1","Other",-97.2884943549386,37.6887700688296
+"268",281,"Red Fox","Moving_Fast","Neighborhood_Park","1","Scared",-97.314051,37.682074
+"269",282,"Other","Moving_Slow","Residential_Area","1","Other",-97.314051,37.682074
+"270",283,"Red Fox","Moving_Fast","Neighborhood_Park","1","Other",-97.3948920941249,37.7509627660722
+"271",284,"Coyote","Mostly_Stationary_Resting,Interacting_with_human_pet","Residential_Area,Neighborhood_Park","2","Indefferent",-97.3425998319736,37.6277719525011
+"272",285,"Coyote","Moving_Slow","Forested_Area","1","Indefferent",-97.5760848756502,37.6124966659165
+"273",286,"Red Fox","Mostly_Stationary_Resting","Street","3+","Happy,Lucky",-97.2289850859866,37.7387702391587
+"274",287,"Red Fox","Moving_Fast","Street","1","Lucky",-97.2754165770277,37.7467427651551
+"275",288,"Red Fox","Moving_Slow","Neighborhood_Park","1","Worried",-97.1528865528825,37.8216121003979
+"276",289,"Coyote","Moving_Fast","Neighborhood_Park","1","Indefferent",-97.4781056745989,37.6656305480619
+"277",290,"Other","Moving_Slow,Vocalizing,Hunting_Eating","Street,Residential_Area,Neighborhood_Park","3+","Happy,Lucky",-97.3747675535019,37.6146567684697
+"278",291,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Happy,Lucky",-97.5404253076145,37.7706470793668
+"279",292,"Red Fox","Other","Residential_Area","3+","Other",-97.314051,37.682074
+"280",293,"Coyote","Interacting_with_human_pet","Other","1","Worried,Other",-97.2607544725453,37.6515335903809
+"281",294,"Coyote","Moving_Slow","Other","1","Other",-97.314051,37.682074
+"282",295,"Coyote","Moving_Slow","Residential_Area","1","Happy",-97.314051,37.682074
+"283",296,"Coyote","Moving_Slow","Street","1","Other",-97.5151560748329,37.7375443804614
+"284",297,"Coyote","Vocalizing","Neighborhood_Park","3+","Indefferent",-97.3706911087053,37.6154711295098
+"285",298,"Red Fox","Moving_Slow","Street","2","Happy",-97.5606121090973,37.6390030460677
+"286",299,"Red Fox","Hunting_Eating","Residential_Area","1","Lucky",-97.314051,37.682074
+"287",300,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Indefferent",-97.4412194457588,37.8055201447996
+"288",301,"Red Fox","Moving_Fast","Residential_Area","1","Happy,Lucky",-97.4326661396585,37.8616107925678
+"289",302,"Coyote","Mostly_Stationary_Resting","Residential_Area","1","Happy,Lucky,Scared",-97.3127162868685,37.5421708625798
+"290",303,"Coyote","Moving_Slow","Forested_Area,Neighborhood_Park,Other","1","Indefferent",-97.2133187817815,37.7146693265392
+"291",304,"Red Fox","Mostly_Stationary_Resting","Residential_Area","3+","Scared",-97.5764316975087,37.6495477915439
+"292",305,"Red Fox","Moving_Slow,Moving_Fast","Residential_Area","1","Indefferent",-97.283381105723,37.7229424375881
+"293",306,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.3316179610477,37.547498590071
+"294",307,"Red Fox","Moving_Fast,Hunting_Eating","Residential_Area","1","Happy",-97.2501448935025,37.5977219788439
+"295",308,"Coyote","Moving_Slow","Forested_Area","1","Happy",-97.290690339215,37.6568678564628
+"296",309,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.2474703041717,37.5425771882484
+"297",310,"Red Fox","Moving_Fast","Other","1","Happy",-97.314051,37.682074
+"298",311,"Red Fox","Hunting_Eating","Forested_Area","3+","Happy",-97.4537088428773,37.6898902969756
+"299",312,"Red Fox","Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Vocalizing,Hunting_Eating,Interacting_with_human_pet,Other","Residential_Area","1","Happy,Lucky",-97.2005365534749,37.6779434321728
+"300",313,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","1","Lucky",-97.314051,37.682074
+"301",314,"Red Fox","Vocalizing,Other","Neighborhood_Park","1","Happy",-97.314051,37.682074
+"302",315,"Red Fox","Moving_Fast","Residential_Area","1","Angry",-97.314051,37.682074
+"303",316,"Coyote","Moving_Slow","Residential_Area","1","Worried",-97.4564297655111,37.5888494715569
+"304",317,"Red Fox","Moving_Fast","Street","1","Happy",-97.458422628825,37.8766122202794
+"305",318,"Red Fox","Moving_Fast","Parking_lot","1","Lucky",-97.1809334865139,37.702416836519
+"306",319,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Lucky",-97.314051,37.682074
+"307",320,"Coyote","Mostly_Stationary_Resting","Wetland,Other","1","Other",-97.110265741351,37.6284285378515
+"308",321,"Other","Moving_Fast","Wetland","1","Happy,Other",-97.4445219521502,37.6407962442477
+"309",322,"Red Fox","Mostly_Stationary_Resting","Residential_Area,Neighborhood_Park","2","Happy",-97.5503781067467,37.9837511303363
+"310",323,"Red Fox","Mostly_Stationary_Resting","Parking_lot","1","Happy",-97.314051,37.682074
+"311",324,"Red Fox","Hunting_Eating","Residential_Area","1","Happy,Indefferent",-97.314051,37.682074
+"312",325,"Red Fox","Moving_Slow","Street,Residential_Area,Wetland","1","Lucky",-97.3992991181734,37.6642245171936
+"313",326,"Red Fox","Other","Street,Other","1","Happy",-97.314051,37.682074
+"314",327,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.3458373052381,37.7995605607234
+"315",328,"Coyote","Moving_Slow,Other","Other","1","Worried",-97.3637518566732,37.8359194688172
+"316",329,"Red Fox","Moving_Fast,Hunting_Eating","Residential_Area","1","Angry",-97.4172298171284,37.7129867082008
+"317",330,"Red Fox","Other","Residential_Area","1","Happy",-97.4417753142889,37.8115905806408
+"318",331,"Red Fox","Mostly_Stationary_Resting,Vocalizing","Street,Residential_Area","2","Happy,Lucky",-97.311632829399,37.6590585374958
+"319",332,"Coyote","Mostly_Stationary_Resting","Wetland,Neighborhood_Park","1","Worried",-97.5144092438546,37.7656959332229
+"320",333,"Coyote","Mostly_Stationary_Resting","Residential_Area","1","Worried",-97.2446607155727,37.6407239083519
+"321",334,"Red Fox","Moving_Slow","Residential_Area,Wetland","2","Scared",-97.4195637430543,37.6973421458928
+"322",335,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.314051,37.682074
+"323",336,"Red Fox","Moving_Slow","Residential_Area","1","Indefferent",-97.2262272671427,37.7779440042288
+"324",337,"Coyote","Other","Other","3+","Indefferent",-97.314051,37.682074
+"325",338,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy,Worried",-97.1265891957046,37.8671491416555
+"326",339,"Red Fox","Moving_Slow","Street","1","Other",-97.3558293030931,37.7641200110306
+"327",340,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.5301885337906,37.7057881963778
+"328",341,"Red Fox","Moving_Slow","Street,Other","1","Happy",-97.314051,37.682074
+"329",342,"Red Fox","Moving_Fast","Residential_Area","1","Indefferent",-97.2971230884967,37.633263348335
+"330",343,"Red Fox","Moving_Fast,Other","Street,Residential_Area","1","Happy",-97.3995075313015,37.5640799139366
+"331",344,"Coyote","Vocalizing","Wetland","3+","Other",-97.526632071779,37.537872457107
+"332",345,"Red Fox","Mostly_Stationary_Resting","Other","1","Happy,Lucky",-97.4645060956532,37.6444841533937
+"333",346,"Red Fox","Moving_Slow,Mostly_Stationary_Resting,Vocalizing","Residential_Area","1","Worried",-97.6058210835309,37.6756030302214
+"334",347,"Red Fox","Moving_Fast","Residential_Area,Neighborhood_Park","1","Lucky",-97.3796474604938,37.2165263613772
+"335",348,"Red Fox","Moving_Slow","Street,Residential_Area","1","Happy",-97.3218622501919,37.7291293278626
+"336",349,"Red Fox","Moving_Fast","Neighborhood_Park","1","Happy,Lucky",-97.4654015483602,37.7063360531774
+"337",350,"Coyote","Moving_Slow","Forested_Area","1","Lucky",-97.3373744940955,37.6828517478644
+"338",351,"Coyote","Moving_Slow,Moving_Fast","Residential_Area,Wetland","1","Worried",-97.7692616458354,37.6232626513974
+"339",352,"Coyote","Moving_Slow","Residential_Area","1","Worried",-97.5107786016,37.7000813309109
+"340",353,"Coyote","Moving_Fast","Other","1","Other",-97.314051,37.682074
+"341",354,"Red Fox","Moving_Fast","Residential_Area","1","Worried",-97.4348548175285,37.6884340563177
+"342",355,"Red Fox","Mostly_Stationary_Resting","Residential_Area","2","Lucky",-97.3951942864761,37.5365176262086
+"343",356,"Coyote","Moving_Fast,Mostly_Stationary_Resting","Street,Other","1","Indefferent",-97.3817532918032,37.5002449984409
+"344",357,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.0715049741716,37.7799790610277
+"345",358,"Coyote","Other","Residential_Area","2","Lucky,Worried",-96.9703367558213,37.797680599284
+"346",359,"Red Fox","Moving_Fast,Vocalizing,Other","Residential_Area","3+","Happy,Lucky",-97.5415477131487,37.7307026029608
+"347",360,"Coyote","Moving_Fast","Residential_Area","1","Happy",-97.0650982273673,37.7216065723305
+"348",361,"Coyote","Moving_Fast","Neighborhood_Park","1","Lucky,Indefferent,Other",-97.4159138898519,37.6071874354225
+"349",362,"Other","Moving_Fast","Wetland","1","Happy,Other",-97.5169130581549,37.6246186098399
+"350",363,"Red Fox","Moving_Slow","Forested_Area","1","Indefferent",-97.3237251481082,37.6511755464628
+"351",364,"Red Fox","Moving_Fast","Street,Residential_Area","1","Lucky",-97.6123802573672,37.7074159593752
+"352",365,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.3104710865763,37.7486795107302
+"353",366,"Red Fox","Moving_Fast,Mostly_Stationary_Resting","Residential_Area","1","Scared,Other",-97.2098757202575,37.7190332032464
+"354",367,"Red Fox","Other","Street,Residential_Area","1","Worried",-97.2783483240688,37.6888664139273
+"355",368,"Coyote","Moving_Fast","Street","1","Worried",-97.3314321479144,37.8049800414639
+"356",369,"Coyote","Mostly_Stationary_Resting","Other","1","Other",-97.314051,37.682074
+"357",370,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Other",-97.6302410090888,37.6581530169938
+"358",371,"Red Fox","Moving_Slow,Moving_Fast","Residential_Area,Wetland","1","Worried",-97.4042237607181,37.67171529535
+"359",372,"Red Fox","Mostly_Stationary_Resting","Street","1","Happy",-97.314051,37.682074
+"360",373,"Red Fox","Moving_Slow","Street,Residential_Area","1","Happy",-97.300717688977,37.7448433627274
+"361",374,"Red Fox","Moving_Slow,Moving_Fast","Other","1","Indefferent",-97.4581031324474,37.6878348216287
+"362",375,"Coyote","Moving_Slow,Mostly_Stationary_Resting","Residential_Area,Neighborhood_Park","1","Happy,Indefferent",-97.1829834028475,37.643339021882
+"363",376,"Coyote","Moving_Fast","Neighborhood_Park","1","Lucky",-97.491902707678,37.7063087336273
+"364",377,"Red Fox","Moving_Fast,Hunting_Eating,Roadkill","Residential_Area,Parking_lot,Neighborhood_Park","3+","Happy,Lucky",-97.2989528453629,37.7109233424916
+"365",378,"Red Fox","Moving_Fast","Street","2","Happy,Lucky",-97.2342631487323,37.6438097367891
+"366",379,"Coyote","Moving_Slow,Interacting_with_human_pet","Residential_Area,Neighborhood_Park","2","Scared,Worried",-97.314051,37.682074
+"367",380,"Red Fox","Other","Residential_Area","1","Worried",-97.2178994941177,37.6263842773471
+"368",381,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.3710355496564,37.6049602433985
+"369",382,"Red Fox","Moving_Fast","Street,Residential_Area,Neighborhood_Park","2","Happy,Lucky,Worried",-97.1909588974346,37.6957583335998
+"370",383,"Coyote","Moving_Slow","Neighborhood_Park","3+","Happy",-97.314051,37.682074
+"371",384,"Red Fox","Moving_Fast","Street","1","Indefferent",-97.4799937241295,37.646211448672
+"372",385,"Red Fox","Moving_Fast,Hunting_Eating","Street,Residential_Area","3+","Happy,Lucky,Worried",-97.509906077481,37.6640225124395
+"373",386,"Coyote","Moving_Slow","Residential_Area","2","Worried",-97.1622681443218,37.5174908444052
+"374",387,"Red Fox","Moving_Slow","Residential_Area,Neighborhood_Park","1","Happy,Lucky",-97.2171561518704,38.0251349383718
+"375",388,"Red Fox","Mostly_Stationary_Resting","Residential_Area","2","Lucky",-97.5259251483457,37.633299925201
+"376",389,"Coyote","Moving_Slow","Street","2","Indefferent",-97.4219843865395,37.7083951510093
+"377",390,"Red Fox","Moving_Fast","Residential_Area","1","Indefferent",-97.6410777898266,37.7994289140161
+"378",391,"Coyote","Moving_Slow","Residential_Area","1","Indefferent",-97.5247252446856,37.8725123445906
+"379",392,"Red Fox","Mostly_Stationary_Resting","Street,Residential_Area,Wetland","3+","Happy,Lucky",-97.314051,37.682074
+"380",393,"Red Fox","Vocalizing","Residential_Area","1","Happy,Indefferent",-97.2981241279045,37.5248828808879
+"381",394,"Coyote","Moving_Slow,Mostly_Stationary_Resting,Vocalizing","Residential_Area,Other","3+","Happy",-97.2251983957984,37.6560447639349
+"382",395,"Red Fox","Other","Residential_Area","1","Happy",-97.314051,37.682074
+"383",396,"Red Fox","Moving_Slow","Residential_Area","3+","Indefferent",-97.4082309177502,37.7264235326062
+"384",397,"Red Fox","Mostly_Stationary_Resting","Other","1","Other",-97.314051,37.682074
+"385",398,"Coyote","Vocalizing","Residential_Area","1","Worried",-97.720072715315,37.6926682196376
+"386",399,"Coyote","Mostly_Stationary_Resting","Residential_Area","2","Scared,Worried,Angry",-97.3267692782739,37.6648541725439
+"387",400,"Red Fox","Moving_Fast","Street,Residential_Area","1","Indefferent",-97.487585436313,37.7311748540539
+"388",401,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","2","Worried",-97.1762364604634,37.825783051228
+"389",402,"Red Fox","Vocalizing","Residential_Area","1","Other",-97.314051,37.682074
+"390",403,"Coyote","Moving_Fast","Street,Other","1","Happy,Lucky,Worried,Other",-97.3325394623594,37.6441181871009
+"391",404,"Red Fox","Moving_Slow,Moving_Fast","Street,Residential_Area","1","Indefferent",-97.314051,37.682074
+"392",405,"Red Fox","Other","Other","1","Happy",-97.3967174890148,37.6759500613234
+"393",406,"Coyote","Moving_Slow","Residential_Area","3+","Worried",-97.1443869881981,37.6409920151729
+"394",407,"Red Fox","Mostly_Stationary_Resting","Residential_Area","3+","Worried",-97.4321567780397,37.6462355041533
+"395",408,"Red Fox","Moving_Slow","Street,Residential_Area","1","Worried",-97.314051,37.682074
+"396",409,"Red Fox","Mostly_Stationary_Resting,Vocalizing","Street,Residential_Area","3+","Happy",-97.6228692983005,37.6553396759699
+"397",410,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.3348817199034,37.736659266982
+"398",411,"Red Fox","Moving_Slow","Street","1","Happy",-97.314051,37.682074
+"399",412,"Other","Moving_Slow,Vocalizing","Residential_Area","1","Other",-97.2815992889062,37.8186126235837
+"400",413,"Other","Moving_Slow","Residential_Area","1","Other",-97.2298889477287,37.5708063615906
+"401",414,"Red Fox","Hunting_Eating","Residential_Area","1","Indefferent",-97.314051,37.682074
+"402",415,"Red Fox","Other","Residential_Area","2","Indefferent",-97.2832306127599,37.7304383877643
+"403",416,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.2907865357532,37.7116316440042
+"404",417,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.1905151522169,37.570757612132
+"405",418,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.3098366817967,37.625355032984
+"406",419,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.3116843191985,37.5848258757706
+"407",420,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.0681331102605,37.6309514696902
+"408",421,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.1815411923381,37.6071669965723
+"409",422,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.4298648298473,37.6253047309042
+"410",423,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.3318335606163,37.6813329412188
+"411",424,"Coyote","Moving_Slow,Interacting_with_human_pet","Residential_Area,Neighborhood_Park","1","Happy",-97.2051171688363,37.722243412052
+"412",425,"Coyote","Moving_Slow","Residential_Area,Forested_Area","1","Other",-97.314051,37.682074
+"413",426,"Red Fox","Other","Street","1","Lucky",-97.3113494803504,37.4970798208593
+"414",427,"Red Fox","Hunting_Eating","Wetland","1","Happy",-97.4547280094029,37.6529192679669
+"415",428,"Red Fox","Moving_Slow","Residential_Area","1","Indefferent",-97.4462619033319,37.5764364792689
+"416",429,"Red Fox","Moving_Slow","Residential_Area","1","Indefferent",-97.4786508092122,37.7419949335784
+"417",430,"Red Fox","Vocalizing","Street,Residential_Area,Other","1","Indefferent",-97.2316920096348,37.7344660867902
+"418",431,"Coyote","Other","Residential_Area","1","Scared",-97.314051,37.682074
+"419",432,"Red Fox","Moving_Slow,Moving_Fast,Mostly_Stationary_Resting,Vocalizing,Hunting_Eating","Residential_Area","3+","Indefferent",-97.4625580590478,37.6551064651961
+"420",433,"Coyote","Vocalizing","Other","3+","Indefferent",-97.3242691619459,37.6247279331298
+"421",434,"Red Fox","Other","Residential_Area","1","Indefferent",-97.3248753206274,37.7649278325471
+"422",435,"Red Fox","Mostly_Stationary_Resting","Street,Residential_Area","1","Happy,Lucky,Worried",-97.314051,37.682074
+"423",436,"Red Fox","Moving_Fast,Vocalizing,Other","Residential_Area,Other","3+","Scared,Worried",-97.3441655748258,37.837245490075
+"424",437,"Red Fox","Mostly_Stationary_Resting,Hunting_Eating,Interacting_with_human_pet","Residential_Area","3+","Happy,Lucky",-97.3815452516396,37.7197677651715
+"425",438,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Worried",-97.314051,37.682074
+"426",439,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy,Indefferent",-97.4104938144974,37.5178894278316
+"427",440,"Red Fox","Moving_Slow","Street,Residential_Area","1","Happy,Lucky",-97.4086500478639,37.6283700247444
+"428",441,"Coyote","Moving_Slow","Residential_Area","1","Happy",-97.3914307882073,37.8634304704144
+"429",442,"Red Fox","Moving_Slow","Residential_Area","1","Happy",-97.3197592029788,37.5925887693239
+"430",443,"Red Fox","Hunting_Eating","Forested_Area","2","Happy,Lucky",-97.4126195358272,37.5096113202279
+"431",444,"Red Fox","Moving_Slow","Other","1","Happy",-97.2469993067826,37.6630051804928
+"432",445,"Red Fox","Moving_Slow","Street,Residential_Area","1","Happy",-97.2050654651316,37.656886726983
+"433",446,"Red Fox","Moving_Slow,Moving_Fast,Vocalizing","Street,Residential_Area","2","Indefferent",-97.5129553724572,37.6916619552175
+"434",447,"Red Fox","Hunting_Eating","Residential_Area","2","Lucky",-97.2206473025178,37.7300308169281
+"435",448,"Red Fox","Moving_Slow,Vocalizing","Street,Residential_Area","1","Lucky",-97.314051,37.682074
+"436",449,"Red Fox","Moving_Fast,Other","Residential_Area","2","Other",-97.3377614163912,37.7473462719451
+"437",450,"Red Fox","Moving_Fast,Vocalizing,Hunting_Eating,Interacting_with_human_pet","Residential_Area,Forested_Area","3+","Lucky,Worried",-97.2460813580113,37.542631520478
+"438",451,"Red Fox","Other","Other","3+","Happy",-97.2951923494039,37.6519771399237
+"439",452,"Red Fox","Moving_Slow","Street,Residential_Area","1","Happy,Lucky",-97.2259194246984,37.7134847427793
+"440",453,"Red Fox","Other","Residential_Area","3+","Happy",-97.3288318483668,37.6603938650541
+"441",454,"Red Fox","Moving_Fast","Street,Residential_Area,Wetland","1","Happy",-97.2473304588707,37.6912549223232
+"442",455,"Coyote","Mostly_Stationary_Resting","Residential_Area","1","Indefferent",-97.4105390129081,37.7636050480485
+"443",456,"Coyote","Moving_Slow","Residential_Area","2","Lucky",-97.3478434809782,37.7474695627415
+"444",457,"Red Fox","Mostly_Stationary_Resting","Residential_Area","1","Indefferent",-97.324386897412,37.6165078219843
+"445",458,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Residential_Area","2","Worried",-97.6794325786518,37.5998172566845
+"446",459,"Coyote","Moving_Slow","Neighborhood_Park","1","Other",-97.2778007278729,37.5201133996493
+"447",460,"Red Fox","Moving_Slow","Street,Residential_Area","1","Happy,Lucky",-97.314051,37.682074
+"448",461,"Red Fox","Other","Residential_Area","1","Happy,Lucky,Scared,Worried",-97.2937936685467,37.7680212350406
+"449",462,"Coyote","Moving_Slow","Neighborhood_Park","1","Indefferent",-97.2513546726479,37.6151230138249
+"450",463,"Red Fox","Moving_Fast","Parking_lot","1","Happy",-97.3010683202915,37.6348038882922
+"451",464,"Coyote","Moving_Slow","Street,Neighborhood_Park","1","Worried",-97.1941972926512,37.726622974247
+"452",465,"Coyote","Moving_Slow","Street,Residential_Area","1","Happy,Lucky",-97.4235571872491,37.6982635560736
+"453",466,"Red Fox","Mostly_Stationary_Resting","Residential_Area","3+","Indefferent",-97.3034284866852,37.740623584975
+"454",467,"Coyote","Moving_Fast","Residential_Area","1","Indefferent",-97.4074442418995,37.7278760647286
+"455",468,"Red Fox","Moving_Fast","Other","1","Happy",-97.2180464133545,37.6992271151078
+"456",469,"Coyote","Moving_Fast","Street","1","Other",-97.2754514943071,37.5879892775811
+"457",470,"Red Fox","Hunting_Eating","Residential_Area,Neighborhood_Park","1","Happy",-97.4890789770458,38.8068744195813
+"458",471,"Coyote","Moving_Slow","Other","1","Lucky",-97.6407879572592,37.6648522639546
+"459",472,"Red Fox","Moving_Fast","Neighborhood_Park","1","Happy",-97.3737079824602,37.7504536895492
+"460",473,"Red Fox","Moving_Fast,Interacting_with_human_pet","Residential_Area","2","Happy",-97.1206296052135,37.4177629180404
+"461",474,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","1","Happy",-97.5229018009693,37.685557810707
+"462",475,"Red Fox","Moving_Fast","Street","1","Scared",-97.2880843071387,37.7422923966459
+"463",476,"Red Fox","Moving_Slow","Neighborhood_Park","1","Happy",-97.2500665080704,37.6547481303117
+"464",477,"Coyote","Interacting_with_human_pet","Street,Wetland,Forested_Area,Other","2","Worried",-97.314051,37.682074
+"465",478,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","3+","Worried",-97.1643211378162,37.7302786163179
+"466",479,"Red Fox","Moving_Slow","Residential_Area","2","Other",-97.499392108108,37.6973919676085
+"467",480,"Red Fox","Mostly_Stationary_Resting","Forested_Area","2","Lucky",-97.3531859908599,37.5433975033902
+"468",481,"Red Fox","Mostly_Stationary_Resting","Residential_Area","3+","Other",-97.2091480571906,37.8100539232007
+"469",482,"Coyote","Moving_Slow,Hunting_Eating","Street,Residential_Area,Forested_Area","1","Happy",-97.0527198483862,37.6424233175738
+"470",483,"Coyote","Moving_Slow","Residential_Area","1","Indefferent",-97.5268420492474,37.7342101071227
+"471",484,"Red Fox","Mostly_Stationary_Resting","Residential_Area","2","Happy,Lucky",-97.314051,37.682074
+"472",485,"Red Fox","Mostly_Stationary_Resting","Other","2","Worried",-97.269214880467,37.7210830137177
+"473",486,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy,Lucky",-97.5125731526209,37.6692956509977
+"474",487,"Red Fox","Mostly_Stationary_Resting","Street","1","Happy",-97.1139589789948,37.6277724961494
+"475",488,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.314051,37.682074
+"476",489,"Red Fox","Moving_Fast","Street","1","Happy",-97.5082456242117,37.6849800636172
+"477",490,"Coyote","Moving_Slow,Vocalizing,Hunting_Eating,Interacting_with_human_pet","Residential_Area","3+","Angry",-97.5352124630706,37.5999567311312
+"478",491,"Red Fox","Moving_Fast,Hunting_Eating","Residential_Area,Wetland,Forested_Area","2","Happy,Lucky",-97.4534815705487,37.6475065051834
+"479",492,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-98.9338412045003,27.157886521831
+"480",493,"Red Fox","Moving_Slow","Wetland,Forested_Area","3+","Happy",-97.4418284100963,37.6699097220313
+"481",494,"Red Fox","Moving_Slow,Vocalizing","Residential_Area","1","Indefferent",-97.4599844274645,37.6487803915074
+"482",495,"Red Fox","Moving_Slow","Neighborhood_Park","1","Happy",-97.3517738009854,37.7926883351109
+"483",496,"Coyote","Moving_Fast","Residential_Area","1","Worried",-96.9643557322976,37.6691650533714
+"484",497,"Red Fox","Roadkill","Street","1","Other",-97.260464905097,37.6731807553583
+"485",498,"Red Fox","Mostly_Stationary_Resting","Residential_Area","3+","Other",-97.3731472901211,37.7589053727979
+"486",499,"Red Fox","Moving_Fast","Residential_Area","1","Other",-97.3524403738809,37.6833459626789
+"487",500,"Coyote","Moving_Fast","Street","1","Worried",-97.6958261107994,37.7155763784692
+"488",501,"Coyote","Moving_Slow","Street","1","Lucky",-97.178221564693,37.7039072895117
+"489",502,"Red Fox","Moving_Fast","Residential_Area","1","Indefferent",-97.2485695107146,37.6156514940881
+"490",503,"Coyote","Mostly_Stationary_Resting","Residential_Area","1","Worried",-97.4132200918081,37.8128797416743
+"491",504,"Red Fox","Other","Residential_Area","2","Indefferent",-97.314051,37.682074
+"492",505,"Red Fox","Mostly_Stationary_Resting","Neighborhood_Park","1","Happy",-97.2766741795866,37.7489272999476
+"493",506,"Red Fox","Moving_Fast","Residential_Area","1","Happy,Lucky",-97.2767657804603,37.7274853638443
+"494",507,"Red Fox","Moving_Slow","Neighborhood_Park","2","Indefferent",-97.2599173924648,37.7332220855465
+"495",508,"Coyote","Moving_Slow,Mostly_Stationary_Resting","Neighborhood_Park","1","Indefferent",-97.314051,37.682074
+"496",509,"Red Fox","Moving_Fast,Other","Residential_Area","1","Happy",-97.3324991140705,37.7256227720221
+"497",510,"Coyote","Moving_Slow","Street","1","Indefferent",-97.1811674808296,37.7582711012517
+"498",511,"Red Fox","Moving_Slow,Hunting_Eating","Street,Residential_Area,Neighborhood_Park","1","Happy,Lucky",-97.3506998954971,37.6058471301323
+"499",512,"Red Fox","Moving_Fast","Residential_Area,Neighborhood_Park","1","Happy,Worried",-97.0853330304855,37.6079873562969
+"500",513,"Red Fox","Mostly_Stationary_Resting","Neighborhood_Park","1","Indefferent",-97.1049501480898,37.6918314025351
+"501",514,"Red Fox","Roadkill","Street","1","Happy,Lucky",-97.1388859478905,37.7681186240494
+"502",515,"Coyote","Moving_Slow","Neighborhood_Park","2","Indefferent",-97.4097398210737,37.6088928036866
+"503",516,"Red Fox","Moving_Slow","Street,Residential_Area","1","Happy",-97.314051,37.682074
+"504",517,"Red Fox","Mostly_Stationary_Resting","Residential_Area,Forested_Area","2","Happy",-97.4279152589136,37.690138519615
+"505",518,"Red Fox","Moving_Slow,Mostly_Stationary_Resting","Street","1","Happy,Lucky",-97.5778847168568,37.5811701455538
+"506",519,"Red Fox","Mostly_Stationary_Resting","Forested_Area,Other","1","Lucky",-97.175007985551,37.6797424089216
+"507",520,"Red Fox","Moving_Slow","Residential_Area","1","Happy",-97.2121858336711,37.6531971159909
+"508",521,"Red Fox","Vocalizing","Street,Residential_Area","2","Happy,Lucky",-97.2093273489626,37.6945867670802
+"509",522,"Coyote","Moving_Slow","Street,Residential_Area,Parking_lot","1","Scared",-97.2224328949571,37.7489038092592
+"510",523,"Red Fox","Interacting_with_human_pet","Residential_Area","1","Indefferent",-97.25081727572,37.7225074754201
+"511",524,"Red Fox","Roadkill","Street","1","Angry",-97.0661616604811,37.729567639777
+"512",525,"Coyote","Moving_Slow,Mostly_Stationary_Resting,Vocalizing,Other","Residential_Area,Forested_Area,Other","1","Scared,Worried,Indefferent",-97.183646887073,37.8315513867286
+"513",526,"Red Fox","Moving_Fast","Residential_Area","1","Happy",-97.314743314455,37.7413407369387
+"514",527,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","1","Happy,Lucky",-97.5487007709675,37.7068474795286
+"515",528,"Coyote","Moving_Fast","Residential_Area","1","Worried",-97.1465674342285,37.5102800106373
+"516",529,"Red Fox","Moving_Fast,Mostly_Stationary_Resting","Residential_Area","1","Happy,Lucky",-97.1074568777387,37.6881001114202
+"517",530,"Red Fox","Moving_Fast","Street,Parking_lot,Forested_Area","1","Lucky",-97.2463057902582,37.5977809634689
+"518",531,"Red Fox","Moving_Slow","Street,Residential_Area","1","Happy",-97.2522213853289,37.576904422376
+"519",532,"Red Fox","Moving_Fast,Vocalizing","Residential_Area","1","Other",-97.3422346292926,37.535022903601
+"520",533,"Red Fox","Moving_Slow","Street,Residential_Area","1","Indefferent",-97.2382651623054,37.7280400844863
+"521",534,"Red Fox","Moving_Slow","Street,Residential_Area,Parking_lot","1","Happy,Lucky",-97.5447200856295,37.6598492045246
+"522",535,"Red Fox","Moving_Slow","Forested_Area","1","Other",-97.2011846282097,37.6986561734678
+"523",536,"Coyote","Moving_Fast","Parking_lot,Forested_Area","2","Worried",-97.1166429149654,37.7253284807083
+"524",537,"Red Fox","Moving_Fast","Residential_Area","1","Happy,Lucky",-97.2762672072719,37.7648719925116
+"525",538,"Red Fox","Moving_Slow","Residential_Area","1","Indefferent",-97.2677593875245,37.7337713576942
+"526",539,"Red Fox","Other","Residential_Area","1","Lucky",-97.436212130871,37.6423159739324
+"527",540,"Red Fox","Other","Residential_Area","3+","Indefferent",-97.3520782177523,37.6465469014727
+"528",541,"Coyote","Mostly_Stationary_Resting","Neighborhood_Park","1","Other",-97.303467053733,37.6580401018775
+"529",542,"Red Fox","Moving_Fast","Residential_Area","3+","Happy",-97.314051,37.682074
+"530",543,"Red Fox","Mostly_Stationary_Resting,Vocalizing","Street,Residential_Area","3+","Worried",-97.314051,37.682074
+"531",544,"Coyote","Moving_Fast","Other","1","Happy,Worried",-97.0651433367511,37.623319550828
+"532",545,"Other","Hunting_Eating","Street","1","Indefferent",-97.1919180172475,37.753144598036
+"533",546,"Coyote","Moving_Slow","Neighborhood_Park","1","Happy",-97.5624840542439,37.6570426941483
+"534",547,"Coyote","Other","Residential_Area","1","Lucky",-97.4921055740833,37.6286194248863
+"535",548,"Red Fox","Moving_Slow","Other","1","Happy,Lucky",-97.4352967450713,37.7087638265579
+"536",549,"Coyote","Moving_Slow,Mostly_Stationary_Resting,Interacting_with_human_pet","Street,Residential_Area,Wetland,Forested_Area","1","Indefferent",-97.1854719240627,37.7309744641764
+"537",550,"Red Fox","Moving_Fast","Residential_Area,Wetland,Forested_Area","1","Happy",-97.3424062276054,37.7759256141427
+"538",551,"Red Fox","Moving_Slow","Residential_Area","1","Scared,Worried",-97.4939545916801,37.7202926502873
+"539",552,"Red Fox","Mostly_Stationary_Resting","Residential_Area,Wetland,Forested_Area","3+","Happy",-97.1855674044097,37.8096721494227
+"540",553,"Red Fox","Moving_Fast,Vocalizing","Street,Residential_Area","3+","Happy,Lucky",-97.4069345010028,37.5992247150804
+"541",554,"Coyote","Interacting_with_human_pet,Other","Residential_Area","2","Scared,Worried,Angry",-97.4456775306555,37.605157513086
+"542",555,"Coyote","Moving_Fast,Vocalizing,Other","Residential_Area,Wetland,Forested_Area","1","Worried",-97.3661896989097,37.7440248170347
+"543",556,"Red Fox","Moving_Fast,Vocalizing,Other","Residential_Area,Wetland,Forested_Area","3+","Worried",-97.4568153952773,37.827586875759
+"544",557,"Red Fox","Other","Residential_Area","2","Happy",-97.2198632018316,37.6585595465278
+"545",558,"Red Fox","Moving_Slow,Moving_Fast,Mostly_Stationary_Resting","Residential_Area,Neighborhood_Park","1","Happy,Lucky",-97.2581315508841,37.701958893252
+"546",559,"Coyote","Moving_Slow","Forested_Area","1","Happy",-97.2564911679655,37.602580876175
+"547",560,"Red Fox","Moving_Slow","Residential_Area","1","Happy,Lucky",-97.472464875464,37.7165164308419
+"548",561,"Red Fox","Moving_Fast","Residential_Area","1","Lucky",-97.2395466119998,37.6187283902504
+"549",562,"Red Fox","Roadkill","Street","1","Other",-97.3395985629711,37.7053304280719
+"550",563,"Coyote","Moving_Slow","Residential_Area","1","Worried",-97.314051,37.682074
+"551",564,"Coyote","Vocalizing","Forested_Area","3+","Worried",-97.4253685674511,37.7397065444914
+"552",565,"Red Fox","Moving_Fast","Residential_Area","1","Angry",-97.4564855437954,37.5748140628138
+"553",566,"Red Fox","Moving_Fast","Street,Residential_Area,Neighborhood_Park","1","Indefferent",-97.1687403286604,37.6783884372604
+"554",567,"Coyote","Moving_Slow","Residential_Area","1","Indefferent",-97.3905608231679,37.5779111106541
+"555",568,"Red Fox","Moving_Fast","Other","1","Indefferent",-97.4733959860309,37.7253639934435
+"556",569,"Red Fox","Moving_Slow","Street","1","Indefferent",-97.3501467249058,37.7369626429495
+"557",570,"Coyote","Moving_Slow,Hunting_Eating","Residential_Area,Forested_Area,Other","2","Worried",-97.3830329750263,37.6649078807357
+"558",571,"Red Fox","Roadkill","Street,Residential_Area","1","Other",-97.1497456828132,37.8208463613742
+"559",572,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy,Lucky",-97.5060967472102,37.6456104814847
+"560",573,"Coyote","Moving_Slow","Street","1","Worried",-97.1171600680908,37.7508839092414
+"561",574,"Coyote","Moving_Slow","Residential_Area","1","Scared,Worried",-97.5810738093505,37.7550258769286
+"562",575,"Red Fox","Moving_Fast","Street","1","Indefferent",-97.3759984106131,37.9237698963748
+"563",576,"Red Fox","Moving_Slow,Vocalizing","Residential_Area,Forested_Area,Neighborhood_Park","3+","Happy",-97.3976815603339,37.5776556908234
+"564",577,"Coyote","Moving_Slow","Neighborhood_Park","1","Worried",-97.0187158361095,37.6414537416517
+"565",578,"Red Fox","Moving_Fast","Residential_Area","1","Other",-97.314051,37.682074
+"566",579,"Red Fox","Moving_Slow","Residential_Area","1","Worried",-97.1652073916634,37.7533806220524
+"567",580,"Coyote","Interacting_with_human_pet,Other","Street","3+","Scared",-97.2364311781751,37.6789718497904
+"568",581,"Red Fox","Moving_Slow","Residential_Area","3+","Happy",-97.314051,37.682074
+"569",582,"Coyote","Moving_Fast,Mostly_Stationary_Resting","Residential_Area","1","Scared,Worried",-97.4126275800496,38.0289556190129
+"570",583,"Red Fox","Vocalizing,Interacting_with_human_pet","Street","1","Happy,Indefferent",-97.5059866177028,37.6573678357924
+"571",584,"Red Fox","Moving_Fast","Neighborhood_Park","1","Happy",-97.2037425493676,37.5691927570105
+"572",585,"Red Fox","Mostly_Stationary_Resting,Other","Street","1","Happy,Lucky,Other",-97.3089638010537,37.6872902047147
+"573",586,"Coyote","Interacting_with_human_pet","Residential_Area","1","Scared,Worried",-97.5633470810235,37.6552833040884
+"574",587,"Coyote","Moving_Slow","Residential_Area","1","Indefferent",-97.481994633587,37.680343598421
+"575",588,"Red Fox","Moving_Fast","Residential_Area","1","Lucky",-97.1422081782972,37.6632019300805
+"576",589,"Coyote","Other","Residential_Area","1","Scared",-97.314051,37.682074
+"577",590,"Red Fox","Other","Other","3+","Lucky",-97.1768642750277,37.7309475803022
+"578",591,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","1","Indefferent",-97.235861202515,37.8112547610508
+"579",592,"Red Fox","Roadkill","Street","1","Other",-97.2156513632652,37.7576791626182
+"580",593,"Red Fox","Roadkill","Street","1","Other",-97.3013711694959,37.7427664834094
+"581",594,"Coyote","Moving_Slow,Mostly_Stationary_Resting,Vocalizing","Residential_Area","3+","Scared",-97.4155476559358,37.7743462835922
+"582",595,"Coyote","Moving_Slow,Other","Residential_Area","3+","Angry",-97.3380744729062,37.634735056059
+"583",596,"Red Fox","Moving_Slow,Moving_Fast","Street,Residential_Area,Parking_lot","1","Happy,Lucky",-97.4251923550454,37.7261532640687
+"584",597,"Red Fox","Moving_Fast","Street,Residential_Area,Wetland,Neighborhood_Park","1","Happy,Worried",-97.1278723117644,37.7004565344997
+"585",598,"Coyote","Moving_Slow","Residential_Area","1","Worried",-97.2380444127115,37.7253555690524
+"586",599,"Red Fox","Mostly_Stationary_Resting,Interacting_with_human_pet","Residential_Area,Neighborhood_Park","1","Scared",-97.2956747890485,37.8125868758599
+"587",600,"Coyote","Moving_Slow,Hunting_Eating","Residential_Area","1","Worried,Angry",-97.3251343849505,37.9107577589113
+"588",601,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","1","Indefferent",-97.3359055306912,37.523015188113
+"589",602,"Coyote","Moving_Slow","Residential_Area","1","Lucky",-97.314051,37.682074
+"590",603,"Red Fox","Moving_Fast","Street,Residential_Area","1","Happy,Lucky",-97.314051,37.682074
+"591",604,"Red Fox","Moving_Slow,Hunting_Eating","Residential_Area","2","Happy,Lucky",-97.5349877535732,37.7412710022312
+"592",605,"Red Fox","Other","Parking_lot","1","Other",-97.3619194875687,37.6925132936296
+"593",606,"Coyote","Moving_Slow,Mostly_Stationary_Resting","Residential_Area,Neighborhood_Park","2","Scared,Worried",-97.3252262657074,37.631857283375
+"594",607,"Red Fox","Moving_Fast,Hunting_Eating","Street,Residential_Area","1","Happy",-97.1788903191097,37.5905379159727

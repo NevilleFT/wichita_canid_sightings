@@ -1,0 +1,74 @@
+---
+title: "Primary Visualizations"
+author: "Neville Taraporevala"
+date: "2023-04-20"
+output: html_document
+---
+
+# Preliminary Visualizations
+
+Here are some initial visualizations of our data!
+
+## Maps
+
+Here is a map of all the sightings broken down by species in Wichita.
+
+```{r firstvis, eval = T, include = T, warning = FALSE, echo = F}
+library(usmap)
+
+sedgwick <- map_data("county", "kansas") %>% 
+  select(lon = long, lat, group, id = subregion) %>% 
+  filter(id == "sedgwick")
+
+ggplot(sedgwick, aes(lon, lat, group = group)) +
+  geom_polygon(fill = "white", colour = "grey50") +
+  geom_point(data = filter(sightings_b_h_f, Species == "Coyote" | Species == "Red Fox"),
+             aes(x = x_long, y = y_lat, group = 1, alpha = 0.3, color = Species))+
+  theme_bw()+
+  xlim(-98,-97)+ylim(37.3,38)+
+  labs(title = "Canid Sightings in Sedgwick County, KS", x = "Longitude", y = "Latitude")
+```
+
+```{r importGgmap, eval = T, include = T, warning = F, message = F, echo = F}
+library(ggmap)
+library(osmdata)
+ict_basemap <- get_map(getbb("Wichita"), zoom=11, maptype = 'terrain', source = 'stamen')
+```
+
+And using `ggmap` we can show it over a basemap.
+
+```{r makemap, eval = T, include = T, warning = F, echo = F}
+ggmap(ict_basemap)+
+  geom_point(data = filter(sightings_b_h_f, Species == "Coyote" | Species == "Red Fox"), 
+             aes(x = x_long, y = y_lat, group = 1, color = Species, alpha = 0.3))+
+  theme_bw()
+```
+
+## How people feel seeing canids
+
+And here are some people's feelings broken down by which animal they saw.
+
+```{r feelingsgraphs, eval = T, include = T, echo = F}
+ggplot(data = filter(sightings_b_h_f, Species == "Coyote" | Species == "Red Fox"),
+       aes(x = Happy, fill = Species)) +
+  geom_bar() +
+  labs(x = "Not Happy                                               Happy  ",
+       y = "Number of People",
+       title = "People who are happy to see red foxes vs. coyotes") +
+  theme_bw() +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+ggplot(data = filter(sightings_b_h_f, Species == "Coyote" | Species == "Red Fox"),
+       aes(x = Worried, fill = Species)) +
+  geom_bar() +
+  labs(x = "Not Worried                                             Worried  ",
+       y = "Number of People",
+       title = "People who are worried to see red foxes vs. coyotes") +
+  theme_bw() +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank())
+
+```
+
+As you can see, a high proportion of people are worried about seeing coyotes and are happy to see foxes.

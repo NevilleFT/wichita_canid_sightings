@@ -9,3 +9,13 @@ zip-code-table
 date-table
 sighting-table
 database-diagram
+cleaning-the-data
+loading-packages-1
+import-sightings-csv-from-survey123-currently-in-data-folder
+change-the-column-names-from-the-long-names-to-shorter-ones.
+coding-behavior
+coding-habitat-and-peoples-feelings
+removing-false-locations
+preliminary-visualizations
+maps
+how-people-feel-seeing-canids

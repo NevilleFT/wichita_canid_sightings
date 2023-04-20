@@ -1,0 +1,379 @@
+# Cleaning the data
+
+Before we can look at the data, we must first clean it so it is in a usable form.
+
+## Loading Packages
+
+First, we call the package `tidyverse`. This package has many helpful functions that we will use.
+
+```{r importTidyverse, eval = T, include = T, warning = FALSE, message = F}
+library(tidyverse)
+
+```
+
+## Import sightings CSV from Survey123 currently in data folder
+
+I have changed the x and y values so I can make this "data" public. I am not able to share the actual data.
+
+
+```{r importData, eval = T, include = T}
+sightings <- read.csv("../data/23-04-15_Sightings.csv")
+```
+
+Check that went well, look at the first few rows and the names of the columns ----
+
+```{r checkSightings, eval = T, include = T}
+sightings %>% as_tibble()
+```
+
+## Change the column names from the long names to shorter ones.
+
+```{r renameColumns, eval = T, include = T}
+colnames(sightings) <- c("SurveyNum",
+                         "SurveyID", 
+                         "Species",
+                         "Behavior",
+                         "Habitat",
+                         "Count",
+                         "Feelings",
+                         "x_long",
+                         "y_lat"
+)
+```
+
+Check that went ok
+```{r checkSightings2, eval = T, include = T}
+sightings %>% as_tibble()
+```
+
+## Coding Behavior
+
+The behaviors are currently coded in 1 cell each as a list of characters separated by commas.
+Instead, we can make these easier to run analyses on if we make these separate columns and code each behavior as a 1 or 0.
+
+
+These are all the combinations of behaviors people have put in. Not super important but interesting.
+
+```{r uniqueBehaviors, eval = T, include = T}
+unique(pull(sightings, Behavior))
+```
+
+First, we will set up vectors of length (# of rows) with NA's.
+
+
+```{r behaviorVectors, eval = T, include = T}
+sightings_length <- length(pull(sightings, SurveyNum))
+
+moving_fast                  <- rep(NA, sightings_length)
+moving_slow                  <- rep(NA, sightings_length)
+mostly_stationary_resting    <- rep(NA, sightings_length)
+hunting_eating               <- rep(NA, sightings_length)
+interacting_with_human_pet   <- rep(NA, sightings_length)
+vocalizing                   <- rep(NA, sightings_length)
+roadkill                     <- rep(NA, sightings_length)
+other_behavior               <- rep(NA, sightings_length)
+```
+
+Now, for each vector, if that behavior is listed, put a 1 in its vector, else put a 0.
+
+```{r behaviorCoding, eval = T, include = T}
+for(i in 1:sightings_length){
+  
+  behavior <- pull(sightings, Behavior)[i]
+  
+  if(grepl("Moving_Fast", behavior)){
+    moving_fast [i] <- 1
+  } else {
+    moving_fast [i] <- 0
+  }
+  
+  if(grepl("Moving_Slow", behavior)){
+    moving_slow [i] <- 1
+  } else {
+    moving_slow [i] <- 0
+  }
+  
+  if(grepl("Mostly_Stationary_Resting", behavior)){
+    mostly_stationary_resting [i] <- 1
+  } else {
+    mostly_stationary_resting [i] <- 0
+  }
+  
+  if(grepl("Hunting_Eating", behavior)){
+    hunting_eating [i] <- 1
+  } else {
+    hunting_eating [i] <- 0
+  }
+  
+  if(grepl("Interacting_with_human_pet", behavior)){
+    interacting_with_human_pet [i] <- 1
+  } else {
+    interacting_with_human_pet [i] <- 0
+  }
+  
+  if(grepl("Vocalizing", behavior)){
+    vocalizing [i] <- 1
+  } else {
+    vocalizing [i] <- 0
+  }
+  
+  if(grepl("Roadkill", behavior)){
+    roadkill [i] <- 1
+  } else {
+    roadkill[i] <- 0
+  }
+  
+  if(grepl("Other", behavior)){
+    other_behavior [i] <- 1
+  } else {
+    other_behavior [i] <- 0
+  }
+  
+}
+```
+
+Now add these behavior vectors as columns on the database.
+And, remove the original behavior column, since it is now redundant.
+
+
+```{r makeSightingsb, eval = T, include = T}
+sightings_b <- sightings %>% 
+  mutate(Moving_fast                  = moving_fast,
+         Moving_slow                  = moving_slow,
+         Mostly_stationary_resting    = mostly_stationary_resting,
+         Hunting_eating               = hunting_eating,
+         Interacting_with_human_pet   = interacting_with_human_pet,
+         Vocalizing                   = vocalizing,
+         Roadkill                     = roadkill,
+         Other_behavior               = other_behavior) %>% 
+  select(-Behavior)
+```
+
+Check that it is gone.
+
+```{r checkBehaviorsGone, eval = T, include = T}
+names(sightings_b)
+```
+
+Now delete all those intermediate behavior vectors.
+
+```{r removeBehaviorVectors, eval = T, include = T}
+rm(behavior)
+rm(moving_fast)
+rm(moving_slow)
+rm(mostly_stationary_resting)
+rm(hunting_eating)
+rm(interacting_with_human_pet)
+rm(vocalizing)
+rm(roadkill)
+rm(other_behavior)
+```
+
+And the old sightings data frame.
+
+```{r removeOriginalSightingsVector, eval = T, include = T}
+rm(sightings)
+```
+
+## Coding Habitat and People's Feelings
+
+We will do the same thing to habitat and feelings that we did to behavior.
+
+These are all the combinations of habitats people have put in. 
+Not super important but interesting.
+
+Here are all the combinations of habitat and feelings.
+
+```{r uniqueHabitats, eval = T, include = T}
+unique(pull(sightings_b, Habitat))
+unique(pull(sightings_b, Feelings))
+```
+
+First, we will set up vectors of length (# of rows) with NA's.
+
+```{r habitatVectors, eval = T, include = T}
+street               <- rep(NA, sightings_length)
+residential_area     <- rep(NA, sightings_length)
+parking_lot          <- rep(NA, sightings_length)
+wetland              <- rep(NA, sightings_length)
+forested_area        <- rep(NA, sightings_length)
+neighborhood_park    <- rep(NA, sightings_length)
+other_habitat        <- rep(NA, sightings_length)
+
+happy                 <- rep(NA, sightings_length)
+lucky                 <- rep(NA, sightings_length)
+scared                <- rep(NA, sightings_length)
+worried               <- rep(NA, sightings_length)
+indifferent           <- rep(NA, sightings_length)
+angry                 <- rep(NA, sightings_length)
+other_feelings        <- rep(NA, sightings_length)
+```
+
+Then we will fill the vectors with 1's and 0's.
+
+```{r habitatCoding, eval = T, include = T}
+for(i in 1:sightings_length){
+  
+  habitat <- pull(sightings_b, Habitat)[i]
+  
+  if(grepl("Street", habitat)){
+    street [i] <- 1
+  } else {
+    street [i] <- 0
+  }
+  
+  if(grepl("Residential_Area", habitat)){
+    residential_area [i] <- 1
+  } else {
+    residential_area [i] <- 0
+  }
+  
+  if(grepl("Parking_lot", habitat)){
+    parking_lot [i] <- 1
+  } else {
+    parking_lot [i] <- 0
+  }
+  
+  if(grepl("Wetland", habitat)){
+    wetland [i] <- 1
+  } else {
+    wetland [i] <- 0
+  }
+  
+  if(grepl("Forested_Area", habitat)){
+    forested_area [i] <- 1
+  } else {
+    forested_area [i] <- 0
+  }
+  
+  if(grepl("Neighborhood_Park", habitat)){
+    neighborhood_park [i] <- 1
+  } else {
+    neighborhood_park[i] <- 0
+  }
+  
+  if(grepl("Other", habitat)){
+    other_habitat [i] <- 1
+  } else {
+    other_habitat [i] <- 0
+  }
+  
+  
+  feelings <- pull(sightings_b, Feelings)[i]
+  
+  if(grepl("Happy", feelings)){
+    happy [i] <- 1
+  } else {
+    happy [i] <- 0
+  }
+  
+  if(grepl("Lucky", feelings)){
+    lucky [i] <- 1
+  } else {
+    lucky [i] <- 0
+  }
+  
+  if(grepl("Scared", feelings)){
+    scared [i] <- 1
+  } else {
+    scared [i] <- 0
+  }
+  
+  if(grepl("Worried", feelings)){
+    worried [i] <- 1
+  } else {
+    worried [i] <- 0
+  }
+  
+  if(grepl("Indefferent", feelings)){
+    indifferent [i] <- 1
+  } else {
+    indifferent [i] <- 0
+  }
+  
+  if(grepl("Angry", feelings)){
+    angry [i] <- 1
+  } else {
+    angry [i] <- 0
+  }
+  
+  if(grepl("Other", feelings)){
+    other_feelings [i] <- 1
+  } else {
+    other_feelings [i] <- 0
+  }
+  
+  
+}
+
+```
+
+And add these to our new data frame.
+
+```{r makeSightingsbhf, eval = T, include = T}
+sightings_b_h_f <- sightings_b %>% 
+  mutate(Street                 = street,
+         Residential_area       = residential_area,
+         Parking_lot            = parking_lot,
+         Wetland                = wetland,
+         Forested_area          = forested_area,
+         Neighborhood_park      = neighborhood_park,
+         Other_habitat          = other_habitat) %>% 
+  select(-Habitat) %>% 
+  mutate(Happy               = happy,
+         Lucky               = lucky,
+         Scared              = scared,
+         Worried             = worried,
+         Indifferent         = indifferent,
+         Angry               = angry,
+         Other_feelings      = other_feelings) %>% 
+  select(-Feelings)
+```
+
+Finally, delete all those intermediate vectors.
+
+```{r removeHabitatVectors, eval = T, include = T}
+rm(habitat)
+rm(street)
+rm(residential_area)
+rm(parking_lot)
+rm(wetland)
+rm(forested_area)
+rm(neighborhood_park)
+rm(other_habitat)
+
+rm(feelings)
+rm(happy)
+rm(lucky)
+rm(scared)
+rm(worried)
+rm(indifferent)
+rm(angry)
+rm(other_feelings)
+```
+
+And the old sightings data frame.
+
+```{r removeBehaviorCodedSightingsVector, eval = T, include = T}
+rm(sightings_b)
+```
+
+Now we are done coding behaviors, habitats, and feelings. On to location!
+
+## Removing false locations
+
+Some of the people filling out the survey were unable to get the map to work. Therefore, the location given is actually just the default location of the marker. So, we will change these values to NA's instead of having lots of points at the same (wrong) place.
+
+```{r locations, eval = T, include = T}
+for (i in 1:sightings_length){
+  if ((pull(sightings_b_h_f, x_long)[i] ==  -97.3140509999967 |
+        pull(sightings_b_h_f, x_long)[i] == -97.3140509999934 |
+        pull(sightings_b_h_f, x_long)[i] == -97.314051) &
+      (pull(sightings_b_h_f, y_lat)[i] ==  37.682074 |
+        pull(sightings_b_h_f, y_lat)[i] == 37.6820739999987|
+        pull(sightings_b_h_f, y_lat)[i] == 37.6820739999974)){
+    sightings_b_h_f$x_long[i]=NA
+    sightings_b_h_f$y_lat[i]=NA
+  }
+}
+```
